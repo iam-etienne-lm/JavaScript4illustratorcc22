@@ -1,5 +1,5 @@
-﻿#target illustrator-21
-#script text-down_v0.5
+#target illustrator-21
+#script text-down_v0.9
 
 "use strict"
 canopener();
