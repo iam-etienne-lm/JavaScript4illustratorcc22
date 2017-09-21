@@ -1,5 +1,5 @@
 #target Illustrator-21
-#targetengine main
+#script "textEdit"
 $.gc();
 app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
 main();
@@ -41,9 +41,9 @@ function cth_s(t1,t2){
         
     if (text_frames.length > 0)    
     {    
-        for (var i = 0 ; i < text_frames.length; i++)    
+        for (var h = 0 ; h < text_frames.length; h++)    
           {    
-              var this_text_frame = text_frames[i];    
+              var this_text_frame = text_frames[h];    
                var new_string = this_text_frame.contents.replace(search_string, replace_string);    
                    
                if (new_string != this_text_frame.contents)    
