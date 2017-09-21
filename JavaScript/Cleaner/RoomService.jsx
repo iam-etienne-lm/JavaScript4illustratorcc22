@@ -15,6 +15,7 @@ function main(){ //reverse order
             d=docs[i];
             //unselect();
             //unhide_Layer(d);
+            unlock_all(d);
             remthings(d);
            
             //closer(d);
@@ -31,6 +32,13 @@ function unhide_Layer(d){															// K LAYERS
     var dl=d.layers;
 	for (var k = 0; k < dl.length; k++ ){				//TODO set names instead of nb
 		dl[k].visible = true;
+	}
+}
+
+function unhide_Layer(d){															// K LAYERS
+    var p=d.pagetItems;
+	for (var k = 0; k < p.length; k++ ){				//TODO set names instead of nb
+		p[k].locked = false;
 	}
 }
 
