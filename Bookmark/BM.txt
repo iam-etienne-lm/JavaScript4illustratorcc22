@@ -49,6 +49,7 @@ targetengine		https://incom.org/post/89818
 PDF 10 rules		http://prepression.blogspot.fr/2014/09/the-ten-commandments-of-pdf.html
 execute		https://stackoverflow.com/questions/18969372/execute-external-script-in-extendscript-for-illustrator#21444343
 JS_ MDN functions	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
+bounds artboards	http://www.indiscripts.com/post/2009/09/clean-up-your-pasteboard
 
 
 =========JSAMPLES
