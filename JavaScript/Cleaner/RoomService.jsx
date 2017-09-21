@@ -1,5 +1,5 @@
 #target Illustrator-21
-#script "ROOMCLEANING"
+#script "ROOMSERVICE"
 "use strict"
 $.gc();
 main();
@@ -13,10 +13,12 @@ function main(){ //reverse order
         app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
         for ( ; i >= 0; i-- ){
             d=docs[i];
-            unselect();
-            unhide_Layer(d);
-            closer(d);
-            //saver(d);  
+            //unselect();
+            //unhide_Layer(d);
+            remthings(d);
+           
+            //closer(d);
+            //saver(d);
             $.write(" ,"+i);
     }
 }
@@ -32,21 +34,26 @@ function unhide_Layer(d){															// K LAYERS
 	}
 }
 
+function remthings(d){
+    var p = d.layers[5].pageItems;
+    var j = p.length-1;
+    //for ( ; j>=0 ; j--){
+        p[j-1].remove();
+    //}
+}
+
 function closer(d){ 
 			d.close(SaveOptions.DONOTSAVECHANGES);
 }
 
 function saver(d){
-			
 		//var saveOptions = new IllustratorSaveOptions();  
 		//saveOptions.pdfCompatible = false;  
 		//d.save(d.fullname, saveOptions);  
 		//d.saved = true;
-		
 		if(d.saved==false){
 			d.close(SaveOptions.SAVECHANGES);
 		}else{
 			d.close(SaveOptions.DONOTSAVECHANGES);
-
 	}
 }
