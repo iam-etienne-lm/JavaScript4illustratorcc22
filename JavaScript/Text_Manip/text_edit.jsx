@@ -7,35 +7,33 @@ app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
 $.write("snr")
 
 function main(){ //reverse order
-    var d //= app.activeDocument
+    var d; //= app.activeDocument
     var docs=app.documents;
     var i =docs.length-1;
     for ( ; i >= 0; i-- ){
         d=docs[i];
-        tgt();
+        tgt(d);
         $.write(" ,"+i);
     }
 }
 
-function tgt(){
+function tgt(d){
      var t1, t2;
-    var d=app.activeDocument;
     t1 = 'DAO ';
     t2 = '' ;
-    cth_s(t1,t2);
+    cth_s(d,t1,t2);
     t1 = 'FORMAT';
     t2 = '              ';
-    cth_s(t1,t2);
+    cth_s(d,t1,t2);
     t1 = '.pdf';
     t2 = '';
-    cth_s(t1,t2);
+    cth_s(d,t1,t2);
     }
 
-function cth_s(t1,t2){
+function cth_s(d,t1,t2){
     //var openDocument = app.documents.item(0);  
-    var active_doc = app.activeDocument;
+    var active_doc = d;
     var search_string = t1; // g for global search, remove i to make a case sensitive search    
-        $.write(search_string)
     var replace_string = t2;      
     var text_frames = active_doc.textFrames;    
         
