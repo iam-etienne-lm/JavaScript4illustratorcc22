@@ -15,6 +15,9 @@ Join text			https://pastebin.com/4nc3kq7X
 Subfolders export		https://forums.adobe.com/message/9534618#9534618
 Parm errors workarounds		https://forums.adobe.com/thread/430404
 
+==========MATHS TUTO
+Bezier Circle			http://hansmuller-flex.blogspot.fr/2011/04/approximating-circular-arc-with-cubic.html
+
 =========JS scripting TUTO
 CODE REVIEW		http://www.jslint.com/
 CODE TEST		http://jsfiddle.net 
