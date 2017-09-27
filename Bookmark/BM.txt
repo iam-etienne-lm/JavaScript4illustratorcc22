@@ -17,6 +17,7 @@ Parm errors workarounds		https://forums.adobe.com/thread/430404
 
 ==========MATHS TUTO
 Bezier Circle			http://hansmuller-flex.blogspot.fr/2011/04/approximating-circular-arc-with-cubic.html
+=				https://forums.adobe.com/message/4290046#4290046
 
 =========JS scripting TUTO
 CODE REVIEW		http://www.jslint.com/
