@@ -55,6 +55,9 @@ execute		https://stackoverflow.com/questions/18969372/execute-external-script-in
 JS_ MDN functions	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
 bounds artboards	http://www.indiscripts.com/post/2009/09/clean-up-your-pasteboard
 
+=========IDE/CONSOLE TUTO
+$ DOLLAR	http://javascript-tools-guide.readthedocs.io/8%20-%20ExtendScript%20Tools%20and%20Features/dollar-object.html
+
 
 =========JSAMPLES
 https://stackoverflow.com/questions/30338254/illustrator-scripting-select-all-paths-using-js
