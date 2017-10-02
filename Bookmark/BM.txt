@@ -1,23 +1,13 @@
-=========SCRIPTS samples
-http://vectips.com/tricks/automate-actions-in-illustrator/
-http://designrshub.com/2013/01/adobe-illustrator-action.html
-https://github.com/jtnimoy/scripting-for-illustrator-tutorial
-http://jongware.mit.edu/iljscs6html/iljscs6/pc_CharacterAttributes.html
-http://jongware.mit.edu/idcs6js/pc_Layer.html
-http://chuwa.iobb.net/tech/illustrator-cc2014-menu-comman.html
-https://forums.adobe.com/thread/644569
-https://forums.adobe.com/community/illustrator/illustrator_scripting
-http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/1.0/docs/WebHelp/app_notes/illustrator_paths.htm
-ESTK	DL			http://www.adobe.com/devnet/scripting/estk.html
-Tools Guide pdf			http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/scripting/pdfs/javascript_tools_guide.pdf
-polygons			https://indisnip.wordpress.com/2010/08/11/round-selected-text-with-polygon/
-Join text			https://pastebin.com/4nc3kq7X
-Subfolders export		https://forums.adobe.com/message/9534618#9534618
-Parm errors workarounds		https://forums.adobe.com/thread/430404
-
-==========MATHS TUTO
-Bezier Circle			http://hansmuller-flex.blogspot.fr/2011/04/approximating-circular-arc-with-cubic.html
-=				https://forums.adobe.com/message/4290046#4290046
+BM.contents:
+=$=JS scripting TUTO=$=
+=$=JSAMPLES=$=
+=$=SCRIPTS samples=$=
+=$=IDE/CONSOLE TUTO=$=
+=$=MATHS TUTO=$=
+=$=TECH=$=
+=$=EXCEL TCD=$=
+=$=EXCEL GANTT=$=
+=$=RADIO=$=
 
 =========JS scripting TUTO
 CODE REVIEW		http://www.jslint.com/
@@ -55,10 +45,6 @@ execute		https://stackoverflow.com/questions/18969372/execute-external-script-in
 JS_ MDN functions	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
 bounds artboards	http://www.indiscripts.com/post/2009/09/clean-up-your-pasteboard
 
-=========IDE/CONSOLE TUTO
-$ DOLLAR	http://javascript-tools-guide.readthedocs.io/8%20-%20ExtendScript%20Tools%20and%20Features/dollar-object.html
-
-
 =========JSAMPLES
 https://stackoverflow.com/questions/30338254/illustrator-scripting-select-all-paths-using-js
 https://stackoverflow.com/questions/11251990/illustrator-javascript-select-based-on-swatch?rq=1
@@ -79,15 +65,29 @@ S&R Control-H		https://forums.adobe.com/message/9442848#9442848
 			https://forums.adobe.com/message/9297616#9297616
 samples			http://creativetuts.com/how-to-remove-all-guides-in-a-document-using-illustrator-script/
 
-=========EXCEL GANTT
-https://www.officetimeline.com/gantt-chart-excel
-http://excelhelphq.com/tutorial-clustered-stacked-column-bar-charts-free/
-http://peltiertech.com/clustered-stacked-column-bar-charts/
-https://www.excel-exercice.com/diagramme-de-gantt/
-http://www.dummies.com/software/microsoft-office/excel/the-art-of-dynamic-labeling-in-excel/
+=========SCRIPTS samples
+http://vectips.com/tricks/automate-actions-in-illustrator/
+http://designrshub.com/2013/01/adobe-illustrator-action.html
+https://github.com/jtnimoy/scripting-for-illustrator-tutorial
+http://jongware.mit.edu/iljscs6html/iljscs6/pc_CharacterAttributes.html
+http://jongware.mit.edu/idcs6js/pc_Layer.html
+http://chuwa.iobb.net/tech/illustrator-cc2014-menu-comman.html
+https://forums.adobe.com/thread/644569
+https://forums.adobe.com/community/illustrator/illustrator_scripting
+http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/1.0/docs/WebHelp/app_notes/illustrator_paths.htm
+ESTK	DL			http://www.adobe.com/devnet/scripting/estk.html
+Tools Guide pdf			http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/scripting/pdfs/javascript_tools_guide.pdf
+polygons			https://indisnip.wordpress.com/2010/08/11/round-selected-text-with-polygon/
+Join text			https://pastebin.com/4nc3kq7X
+Subfolders export		https://forums.adobe.com/message/9534618#9534618
+Parm errors workarounds		https://forums.adobe.com/thread/430404
 
-=========EXCEL TCD
-http://www.lecompagnon.info/excel/tableaucroise.htm
+=========IDE/CONSOLE TUTO
+$ DOLLAR	http://javascript-tools-guide.readthedocs.io/8%20-%20ExtendScript%20Tools%20and%20Features/dollar-object.html
+
+==========MATHS TUTO
+Bezier Circle			http://hansmuller-flex.blogspot.fr/2011/04/approximating-circular-arc-with-cubic.html
+=				https://forums.adobe.com/message/4290046#4290046
 
 ============TECH
 http://www.dummies.com/software/adobe/illustrator/how-to-save-to-pdf-with-adobe-illustrator-cs6/
@@ -101,6 +101,16 @@ wiimote				http://www.desiquintans.com/headtrack
 				http://www.makeuseof.com/tag/how-to-connect-your-wiimote-to-your-pc/
 Tesseract Ios			https://www.raywenderlich.com/93276/implementing-tesseract-ocr-ios
 GIT over powershell		https://thepracticalsysadmin.com/setting-up-git-in-windows/
+
+=========EXCEL TCD
+http://www.lecompagnon.info/excel/tableaucroise.htm
+
+=========EXCEL GANTT
+https://www.officetimeline.com/gantt-chart-excel
+http://excelhelphq.com/tutorial-clustered-stacked-column-bar-charts-free/
+http://peltiertech.com/clustered-stacked-column-bar-charts/
+https://www.excel-exercice.com/diagramme-de-gantt/
+http://www.dummies.com/software/microsoft-office/excel/the-art-of-dynamic-labeling-in-excel/
 
 =========RADIO
 http://www.bbc.co.uk/radio/player/bbc_radio_one#
