@@ -104,6 +104,7 @@ GIT over powershell		https://thepracticalsysadmin.com/setting-up-git-in-windows/
 
 =========EXCEL TCD
 http://www.lecompagnon.info/excel/tableaucroise.htm
+https://www.ablebits.com/office-addins-blog/2016/01/13/show-formulas-excel/#Excel-shows-formula-not-result
 
 =========EXCEL GANTT
 https://www.officetimeline.com/gantt-chart-excel
