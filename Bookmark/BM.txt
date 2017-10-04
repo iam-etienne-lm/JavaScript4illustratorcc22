@@ -112,5 +112,9 @@ http://peltiertech.com/clustered-stacked-column-bar-charts/
 https://www.excel-exercice.com/diagramme-de-gantt/
 http://www.dummies.com/software/microsoft-office/excel/the-art-of-dynamic-labeling-in-excel/
 
+=========PDF
+http://www.techrepublic.com/blog/tr-dojo/edit-pdf-documents-with-libreoffice-draw/
+http://aiscripts.com/open-multipage-pdf/
+
 =========RADIO
 http://www.bbc.co.uk/radio/player/bbc_radio_one#
