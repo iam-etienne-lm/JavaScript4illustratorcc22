@@ -1,35 +1,26 @@
-#target illustrator-21
-#script text-down_v0.9
-
+#target Illustrator-21
+#script "molu-text"
 "use strict"
-canopener();
-$.write (" okay");
+$.gc();
+//app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
+main();
+//app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
+$.write(" molu'd ")
 $.gc();
 
-function main(doc){
-	get_pi(doc);
-}
-
-function canopener(){
-	var sort=[];
-	var sourceFolder = Folder ("C:/TEMPai/F7/output/dao");		//y.test or F7
-	var files1 = [];
-    var fileType = "*.pdf"; //pdf
-	files1 = sourceFolder.getFiles( fileType );
-	if ( files1.length != 0 ){
-		var i=0;
-		for ( ; i < files1.length; i++ ){			//AT EACH i ITERACTION EVENTS DO THINGS
-			var doc = app.open(files1[i]);
-			app.redraw();
-               $.write(i+" ,")
-			main(doc);
-            
-		}
-	}
+function main(){ //reverse order
+    var docs=app.documents;
+    var i =docs.length-1;
+    var d
+    for ( ; i >= 0; i-- ){
+        d=docs[i];
+        get_pi (d);
+        $.write(" ,"+i);
+    }
 }
 
 function get_pi(doc){
-	var pi=doc.layers[3].pageItems;
+	var pi=doc.layers[2].pageItems[1]; //SET LAYERS[INDEX]
 	for(var j=0; j < pi.length; j++){
 		//pi[j].selected=true;
 		//create_pathText(app.selection[0]);  
