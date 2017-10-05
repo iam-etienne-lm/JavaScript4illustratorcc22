@@ -1,0 +1,38 @@
+#target Illustrator-21
+#script "move2layer"
+$.gc();
+//app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
+main();
+//app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
+$.write(" done=")
+$.gc();
+
+function main(){ //reverse order
+    var d,//= app.activeDocument
+    docs=app.documents,
+    i =docs.length-1;
+    for ( ; i >= 0; i-- ){
+        d=docs[i];
+        m2L(d);
+        $.write(" ,"+i);
+    }
+    /*2 cases recursive or not
+        */
+}
+
+function m2L(d){
+            var t = d.textFrames,
+            i = 0,
+            l = d.layers[0];
+            //gt;
+        for (; i < t.length; i++) {
+            t[i].move(l , ElementPlacement.PLACEATEND);
+            //gt = t[i].geometricBounds;
+            //if (gt[0] > g[0] && gt[1] < g[1] && gt[2] < g[2] && gt[3] > g[3]) { //POSSIBLE ISSUE TOO LARGE TF
+            //    return t[i]
+            //}
+        }
+        l=null;
+
+}
+
