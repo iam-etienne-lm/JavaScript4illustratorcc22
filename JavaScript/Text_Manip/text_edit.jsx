@@ -1,28 +1,38 @@
 #target Illustrator-21
 #script "textEdit"
 $.gc();
-app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
+//app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
 main();
-app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
-$.write("snr")
+//app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
+$.write(" CTRL+H ")
 
 function main(){ //reverse order
-    var d; //= app.activeDocument
+    var d= app.activeDocument
     var docs=app.documents;
     var i =docs.length-1;
     for ( ; i >= 0; i-- ){
         d=docs[i];
-        tgt(d);
+        tgt2(d);
         $.write(" ,"+i);
     }
+    /*2 cases recursive or not
+        */
 }
+
+function tgt2(d){
+     var t1, t2;
+    t1 = '3-0';
+    t2 = '';
+    cth_s(d,t1,t2);
+
+    }
 
 function tgt(d){
      var t1, t2;
     t1 = 'DAO ';
     t2 = '' ;
     cth_s(d,t1,t2);
-    t1 = 'FORMAT';
+    t1 = 'FORMATS';
     t2 = '              ';
     cth_s(d,t1,t2);
     t1 = '.pdf';
