@@ -1,39 +1,64 @@
 #target Illustrator-21
-#script "stack F7.43"
+#script "stackPrint WIP J1.50"
 "use strict"
-opentwinfolder();
-$.write("ok")
+//main();
+$.write("stackPrint ok >")
 $.gc();
 
-function opentwinfolder(){
+function main(){
 //INIT
 	var fileType = "*.pdf",
-	impFolder = Folder ("C:/TEMPai/F7/output/dao"),					//y.test OK > F7
-	files2 = [],
-	outputFile = File ("C:/TEMPai/F7/output/111.pdf"),
-	o= app.open (outputFile);
-	files2 = impFolder.getFiles( fileType );
-	if ( files2.length != 0 ){
-			//for ( var i = 0; i < files2.length; i++ ){//AT EACH i ITERACTION EVENTS DO THINGS
-			for ( var i = 0; i < 5; i++ ){//AT EACH i ITERACTION EVENTS DO THINGS
-				var d = app.open(files2[i]);
-				//unhide_Layer(d);
-                    selector2();														//focus whole doc not only DAO
-                    scalex();
-                            d.activate();
-                            selector2();
-				reframe();
-                            d.activate();
-                            selector2();
-                  //app.activeDocument.layers[2].visible=false;
-				duplicatex(d, o);
-                            o.activate();
-				movexy(i);
+    daoFolder = Folder ("C:/TEMPai/J1/dao"),
+	impFolder = Folder ("C:/TEMPai/J1/imp"),
+    dao = [],
+	imp = [],    
+	outputFile = File ("C:/TEMPai/J1/output/stack1.pdf"),
+    i = 0,
+    imax = dao.length,
+	out= app.open (outputFile);
+    
+    dao = daoFolder.getFiles( fileType );
+	imp = impFolder.getFiles( fileType );  
+	if ( dao.length == imp.length ){
+                    for ( ; i < imax; i++ ){    //AT EACH i ITERACTION EVENTS DO THINGS
+                    app.open(dao[i]);
+                    app.open(imp[i]);
+                        preprocess (dao[i]);
+                        preprocess (imp[i]);
+                            
+                        duplicatex(d, out);
+                                    out.activate();
+                        movexy(i);
 				d.close(SaveOptions.DONOTSAVECHANGES);
 				$.write(" || "+i+"i || ");
             }
     }
 	//outputDoc.close(saveOptions.SAVECHANGES);
+}
+
+function preprocess( d ){
+        unhide_Layer(d);
+        selector2();
+        scalex();
+        d.activate();
+        selector2();
+        reframe();
+        d.activate();
+        selector2();
+}
+
+function mergetwin(){ 													//active doc!!!
+	if(impFile != null){
+		daoFile.activate();
+		selector();
+		if ( app.activeDocument.selection.length > 0 ) {
+			app.executeMenuCommand('copy');
+			impFile.activate();
+			app.executeMenuCommand('pasteFront');
+		}else{  
+			alert( 'empty selection' );
+		}
+	}
 }
 
 function unhide_Layer(d){															// K LAYERS
@@ -48,28 +73,30 @@ function selector1(){
 	}
 }
 
-function deselector(d){
-	for ( var l = 0; l < d.pageItems.length-1; l++) { 	//pageItems  L
-		app.activeDocument.pageItems[l].selected = false;
-	}
-}
-
 function selector2(){
 	app.executeMenuCommand('selectallinartboard');
 }
 
+function deselector(d){
+	//for ( var l = 0; l < d.pageItems.length-1; l++) { 	//pageItems  L
+		//app.activeDocument.pageItems[l].selected = false;
+	//}
+    app.activeDocument.selection = null;
+}
+
 function scalex(){
 	var set = 'a1', // action set name  
-	action = 'a1', // action name  
+	action = 'a1', // action name
+    s = 10.0,
 actionStr = ['/version 3',
 '/name [' + set.length,  
-  ascii2Hex(set),				//script_action1
+  ascii2Hex(set),
 ']',
 '/isOpen 1',
 '/actionCount 1',
 '/action-1 {',
 	'/name ['+ action.length,  
-	ascii2Hex(action), 							//scale10
+	ascii2Hex(action), 							
 	']',
 	'/keyIndex 0',
 	'/colorIndex 0',
@@ -102,7 +129,7 @@ actionStr = ['/version 3',
 			'/key 1935895653',
 			'/showInPalette -1',
 			'/type (unit real)',
-			'/value 7.0',							//Should be the 7%
+			'/value '+s,							//scale factor
 			'/unit 592474723',
 		'}',
 		'/parameter-4 {',
