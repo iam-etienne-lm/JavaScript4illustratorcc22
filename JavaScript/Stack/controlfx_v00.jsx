@@ -1,5 +1,6 @@
 #target Illustrator-21
 #script controlFX v0.0
+//dev draft
 
 #target Illustrator-21
 //global
