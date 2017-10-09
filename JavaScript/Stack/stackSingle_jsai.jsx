@@ -11,8 +11,6 @@ function main(){
 //INIT
 	var fileType = "*.pdf", i , imax, d, dao = [] ,
     daoFolder = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/313023-09_LOGO JOON FUS BACK RHS/ARCHIVES/test/DAO V2"),
-	//impFolder = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/313023-09_LOGO JOON FUS BACK RHS/DAO V2"),
-    //imp = [],    
 	outputFile = File ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/MONTAGES/09.ai"),
 	out= app.open (outputFile);
     
@@ -20,14 +18,13 @@ function main(){
     dao = daoFolder.getFiles( fileType );
         i = 0;
     imax = dao.length;
-	//imp = impFolder.getFiles( fileType );  
-	if ( dao.length != 0 ){
+    if ( dao.length != 0 ){
                     for ( ; i < imax; i++ ){    //AT EACH i ITERACTION EVENTS DO THINGS
                     //d=dao[i];
                     app.open(dao[i]);
-                    //app.open(imp[i]);
+                   
                         preprocess (dao[i]);
-                        //preprocess (imp[i]);
+                       
                             
                         duplicatex(d, out);
                         out.activate();
@@ -40,30 +37,13 @@ function main(){
 }
 
 function preprocess( d ){
-        //unhide_Layer(d); unecessary first
+        unhide_Layer(d); //unecessary first
         selector2();
         scalex();
-        //d.activate();
-        //selector2();
-        //reframe();
+       
         d.activate();
         selector2();
         return (d);
-}
-
-//todo remove
-function mergetwin(){ 	//useless in single_mode
-	if(impFile != null){
-		daoFile.activate();
-		selector();
-		if ( app.activeDocument.selection.length > 0 ) {
-			app.executeMenuCommand('copy');
-			impFile.activate();
-			app.executeMenuCommand('pasteFront');
-		}else{  
-			alert( 'empty selection' );
-		}
-	}
 }
 
 function unhide_Layer(d){															// K LAYERS
@@ -72,29 +52,14 @@ function unhide_Layer(d){															// K LAYERS
 	}
 }
 
-//todo remove
-function selector1(){
-	for ( var l = 0; l < app.activeDocument.pageItems.length-1; l++) { 	//pageItems  L
-		app.activeDocument.pageItems[l].selected = true;
-	}
-}
-
 function selector2(){
 	app.executeMenuCommand('selectallinartboard');
-}
-
-//todo remove
-function deselector(d){
-	//for ( var l = 0; l < d.pageItems.length-1; l++) { 	//pageItems  L
-		//app.activeDocument.pageItems[l].selected = false;
-	//}
-    app.activeDocument.selection = null;
 }
 
 function scalex(){
 	var set = 'a1', // action set name  
 	action = 'a1', // action name
-    s = 10.0,
+    s = 5.0,
 actionStr = ['/version 3',
 '/name [' + set.length,  
   ascii2Hex(set),
@@ -150,62 +115,6 @@ actionStr = ['/version 3',
 '}'].join('\n');
 loading(action, actionStr, set);
 } 
-
-//todo remove at end
-function reframe(){
-	var set = 'a2', // action set name  
-	action = 'a2', // action name  
-actionStr = ['/version 3',
-'/name [' + set.length,  
-  ascii2Hex(set),				
-']',
-'/isOpen 1',
-'/actionCount 1',
-'/action-1 {',
-	'/name ['+ action.length,  
-	ascii2Hex(action),
-'	]',
-'	/keyIndex 0',
-'	/colorIndex 0',
-'	/isOpen 1',
-'	/eventCount 1',
-'	/event-1 {',
-'		/useRulersIn1stQuadrant 0',
-'		/internalName (adobe_commandManager)',
-'		/localizedName [ 32',
-'			416363c3a964657220c3a020756e6520636f6d6d616e6465206465206d656e75',
-'		]',
-'		/isOpen 0',
-'		/isOn 1',
-'		/hasDialog 0',
-'		/parameterCount 3',
-'		/parameter-1 {',
-'			/key 1769238125',
-'			/showInPalette -1',
-'			/type (ustring)',
-'			/value [ 28',
-'				46697420417274626f61726420746f2073656c656374656420417274',
-'			]',
-'		}',
-'		/parameter-2 {',
-'			/key 1818455661',
-'			/showInPalette -1',
-'			/type (ustring)',
-'			/value [ 40',
-'				416a757374657220c3a0206c27696c6c757374726174696f6e2073c3a96c6563',
-'				74696f6e6ec3a965',
-'			]',
-'		}',
-'		/parameter-3 {',
-'			/key 1668114788',
-'			/showInPalette -1',
-'			/type (integer)',
-'			/value -2130706017',
-'		}',
-'	}',
-'}'].join('\n');
-loading(action, actionStr, set);
-}
 
 function duplicatex(d, o){
 	if (d != null){		
