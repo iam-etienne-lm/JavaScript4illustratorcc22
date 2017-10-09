@@ -1,5 +1,5 @@
 #target Illustrator-21
-#script "stackPrint WIP J1.50"
+#script "stackPrint single J1.1.50"
 "use strict"
 //main();
 $.write("stackPrint ok >")
