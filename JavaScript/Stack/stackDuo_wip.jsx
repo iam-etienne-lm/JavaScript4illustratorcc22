@@ -9,9 +9,9 @@ $.gc();
 function main(){
 //INIT
 	var fileType = "*.pdf",
-	daoFolder = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/MONTAGES/archive/DAO"),					//y.test OK > F7
+	daoFolder = Folder ("S:/MONTAGES/archive/DAO"),					//y.test OK > F7
 	files2 = [],
-	outputFile = File ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/MONTAGES/02.ai"),
+	outputFile = File ("S:/MONTAGES/02.ai"),
 	o= app.open (outputFile);
 	files2 = daoFolder.getFiles( fileType );
 	if ( files2.length =! 0 ){
