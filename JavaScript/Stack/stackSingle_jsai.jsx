@@ -1,53 +1,58 @@
 #target Illustrator-21
-#script "stackPrint single J1.1.50"
+#script "stackPrint single J1.1.60"
 "use strict"
-//main();
-$.write("stackPrint ok >")
+$.level=2;
+main();
+$.write("stackPrint ok >");
 $.gc();
 
+//todo clean on comments
 function main(){
 //INIT
-	var fileType = "*.pdf",
-    daoFolder = Folder ("C:/TEMPai/J1/dao"),
-	impFolder = Folder ("C:/TEMPai/J1/imp"),
-    dao = [],
-	imp = [],    
-	outputFile = File ("C:/TEMPai/J1/output/stack1.pdf"),
-    i = 0,
-    imax = dao.length,
+	var fileType = "*.pdf", i , imax, d, dao = [] ,
+    daoFolder = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/313023-09_LOGO JOON FUS BACK RHS/ARCHIVES/test/DAO V2"),
+	//impFolder = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/313023-09_LOGO JOON FUS BACK RHS/DAO V2"),
+    //imp = [],    
+	outputFile = File ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/MONTAGES/09.ai"),
 	out= app.open (outputFile);
     
+//MAIN CODE    
     dao = daoFolder.getFiles( fileType );
-	imp = impFolder.getFiles( fileType );  
-	if ( dao.length == imp.length ){
+        i = 0;
+    imax = dao.length;
+	//imp = impFolder.getFiles( fileType );  
+	if ( dao.length != 0 ){
                     for ( ; i < imax; i++ ){    //AT EACH i ITERACTION EVENTS DO THINGS
+                    //d=dao[i];
                     app.open(dao[i]);
-                    app.open(imp[i]);
+                    //app.open(imp[i]);
                         preprocess (dao[i]);
-                        preprocess (imp[i]);
+                        //preprocess (imp[i]);
                             
                         duplicatex(d, out);
-                                    out.activate();
+                        out.activate();
                         movexy(i);
-				d.close(SaveOptions.DONOTSAVECHANGES);
-				$.write(" || "+i+"i || ");
-            }
+                    d.close(SaveOptions.DONOTSAVECHANGES);
+                    $.write(" || "+i+"i || ");
+                    }
     }
 	//outputDoc.close(saveOptions.SAVECHANGES);
 }
 
 function preprocess( d ){
-        unhide_Layer(d);
+        //unhide_Layer(d); unecessary first
         selector2();
         scalex();
+        //d.activate();
+        //selector2();
+        //reframe();
         d.activate();
         selector2();
-        reframe();
-        d.activate();
-        selector2();
+        return (d);
 }
 
-function mergetwin(){ 													//active doc!!!
+//todo remove
+function mergetwin(){ 	//useless in single_mode
 	if(impFile != null){
 		daoFile.activate();
 		selector();
@@ -67,6 +72,7 @@ function unhide_Layer(d){															// K LAYERS
 	}
 }
 
+//todo remove
 function selector1(){
 	for ( var l = 0; l < app.activeDocument.pageItems.length-1; l++) { 	//pageItems  L
 		app.activeDocument.pageItems[l].selected = true;
@@ -77,6 +83,7 @@ function selector2(){
 	app.executeMenuCommand('selectallinartboard');
 }
 
+//todo remove
 function deselector(d){
 	//for ( var l = 0; l < d.pageItems.length-1; l++) { 	//pageItems  L
 		//app.activeDocument.pageItems[l].selected = false;
@@ -144,6 +151,7 @@ actionStr = ['/version 3',
 loading(action, actionStr, set);
 } 
 
+//todo remove at end
 function reframe(){
 	var set = 'a2', // action set name  
 	action = 'a2', // action name  
@@ -211,21 +219,22 @@ function duplicatex(d, o){
 	}
 }
 
+//todo redo maths 5%
 function movexy(i){
 //INIT
 	var hpos= i%13,
 	vpos= Math.floor(i/13),					//0 for i<13
-    unit=72/25.4
-	amalwidth=87.5,							//col step
-	amalheigth=280,                                 //row step
+    unit=72/25.4,
+	amalwidth=62.5,							//col step
+	amalheigth=200,                                 //row step
 	x = Math.floor((30 + hpos*amalwidth ) *unit), //mm conversion follows +right
 	y = Math.floor((30 + vpos*amalheigth) *unit)*(-1); //mm -below
 //CODE
-	if ( i>=10){
-		$.write("[[hpos="+hpos+" vpos="+vpos+"]] //x="+x+" y="+y+"\\ ");
-	}else{
+	//if ( i>=10){
+		//$.write("[[hpos="+hpos+" vpos="+vpos+"]] //x="+x+" y="+y+"\\ ");
+	//}else{
         $.write(" "+vpos+" "+hpos+" ");
-    }
+    //}
 	var set = 'a3',
 	action = 'a3',
 actionStr = ['/version 3',
@@ -279,11 +288,11 @@ loading(action, actionStr, set);
 } 
 
 function loading(action, actionStr, set){
-	app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
+	app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
 	createAction(actionStr, set);     
 	app.doScript(action, set);   
 	app.unloadAction (set, '');
-	app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS
+	app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
 }
 
 function createAction (actionStr, set) {
