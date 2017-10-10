@@ -11,7 +11,8 @@ BM.contents:
 
 =========JS scripting TUTO
 CODE REVIEW		http://www.jshint.com/
-CODE TEST		http://jsfiddle.net 
+CODE TEST		http://jsfiddle.net
+Variable Scope		https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/
 http://www.tarleton.edu/COSTWEB/computerscience/documents/CS%20230%20Documents/Articles/JavaScript%20Tutorial.pdf
 https://code.tutsplus.com/series/learn-javascript-the-complete-guide--cms-1112
 http://www.adobepress.com/articles/article.asp?p=791593&seqNum=7
