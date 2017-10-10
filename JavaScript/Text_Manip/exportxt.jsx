@@ -8,12 +8,14 @@ $.gc();
 
 function main(){
 //INIT
-        var fileType = "*.pdf", i , imax, d, dao = [] , sF = [], k,
-
-        sF[3] = Folder ("S:/Articles/04"),
-        sF[4] = Folder ("S:/Articles/07"),
-        sF[5] = Folder ("S:/Articles/08"),
-        sF[6] = Folder ("S:/Articles/09"),
+        var fileType = "*.pdf", i , imax, d, f = [] , sF = [];
+        //sF[0] = Folder ("S:/Articles/Source");
+        sF[1] = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/Kitting/Source/01");
+        //sF[2] = Folder ("S:/Articles/Source/02");
+        //sF[3] = Folder ("S:/Articles/Source/04");
+        //sF[4] = Folder ("S:/Articles/Source/07");
+        //sF[5] = Folder ("S:/Articles/Source/08");
+        //sF[6] = Folder ("S:/Articles/Source/09");
 
 //MAIN CODE    
         f = sF[1].getFiles( fileType );
@@ -24,35 +26,29 @@ function main(){
                     d=f[i];
                     app.open(d);
                         makelist(d);
-                        exportlist(textlist);
+                        exportlist(tL);
                     d.close(SaveOptions.DONOTSAVECHANGES);
                     $.write(" || "+i+"i || ");
                 }
     }
 }
-makelist();
-exportlist(textlist);
 
 function makelist(d){
-	var tL = [], //text array
-
+	var tL = []; //text array
 	tL.push(d.name);
-    var tF=d.textFrames; //array
+    var tF = d.textFrames; //array
 	for ( var i = 0; i < tF.length; i++ ){
 		tL.push(tF[i].contents);
 	}
     return (tL);
 }
 
-function exportlist(){
+function exportlist(tL){
 	var tbuffer = ""
 	var fpath = Folder( "S:/Articles/Kitting");
 	var file_export = File(fpath + '/'+ 'export1.txt');
 	file_export.open('w');
 	var tbuffer = file_export.read()
-	// while (!file_export.eof) {
-		// tbuffer += file_export.readln() + "\n";
-	// }
 	file_export.write(tbuffer+"\n"+tL);
     alert(+tL)
 }
