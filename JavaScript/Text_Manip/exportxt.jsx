@@ -23,8 +23,8 @@ function main(){
     imax = f.length; //files
     if ( f.length != 0 ){
                 for ( ; i < imax; i++ ){
-                    d=f[i];
-                    app.open(d);
+            
+                    d = app.open(f[i]);
                         makelist(d);
                         exportlist(tL);
                     d.close(SaveOptions.DONOTSAVECHANGES);
