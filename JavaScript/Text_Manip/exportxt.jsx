@@ -10,7 +10,7 @@ function main(){
 //INIT
         var fileType = "*.pdf", i , imax, d, f = [] , sF = [];
         //sF[0] = Folder ("S:/Articles/Source");
-        sF[1] = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/Kitting/Source/01");
+        sF[1] = Folder ("S:/Articles/Source/01");
         //sF[2] = Folder ("S:/Articles/Source/02");
         //sF[3] = Folder ("S:/Articles/Source/04");
         //sF[4] = Folder ("S:/Articles/Source/07");
