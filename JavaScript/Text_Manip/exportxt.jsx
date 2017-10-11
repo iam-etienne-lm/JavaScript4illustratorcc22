@@ -9,23 +9,21 @@ $.gc();
 function main(){
 //INIT
         var fileType = "*.pdf", i , imax, d, f = [] , sF = [], j , jmax;
-        
+
+//MAIN CODE 
         var tL =[]
-        //sF[0] = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/Kitting/Source");
-        sF[1] = Folder ("S:/Source/01");
-        sF[2] = Folder ("S:/Source/02");
-        sF[3] = Folder ("S:/Source/04");
-        sF[4] = Folder ("S:/Source/07");
-        sF[5] = Folder ("S:/Source/08");
-        sF[6] = Folder ("S:/Source/09");
+        //sF[0] = Folder ("S:/Articles/Source");
+        sF[1] = Folder ("S:/Articles/01");
+        sF[2] = Folder ("S:/Articles/02");
+        sF[3] = Folder ("S:/Articles/04");
+        sF[4] = Folder ("S:/Articles/07");
+        sF[5] = Folder ("S:/Articles/08");
+        sF[6] = Folder ("S:/Articles/09");
         jmax = sF.length;
-        j=2
+        j=1
         for ( ; j < jmax; j++ ){
-        //sF[0] = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/Kitting/Source");
-
-
-//MAIN CODE    
-        f = sF[j].getFiles( fileType );
+        //sF[0] = Folder ("S:/Source");
+          f = sF[j].getFiles( fileType );
         i = 0;
     imax = f.length; //files
     if ( f.length != 0 ){
@@ -53,7 +51,7 @@ function makelist(d, tL){
 
 function exportlist(tL){
 	var tbuffer = ""
-	var fpath = Folder( "S:/Articles/Kitting");
+	var fpath = Folder( "S:/Kitting");
 	var file_export = File(fpath + '/'+ 'export1.txt');
 	file_export.open('w');
 	var tbuffer = file_export.read()
