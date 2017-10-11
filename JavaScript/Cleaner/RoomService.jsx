@@ -7,18 +7,13 @@ main();
 $.write("cleaned/saved")
 $.gc();
 
-function main2(){
-   var d=app.activeDocument;
-   addthings (d);
-}
-
 function main(){ //reverse order
         var docs=app.documents;
         var i =docs.length-1;
         var d
         //app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
         for ( ; i >= 0; i-- ){
-            d=docs[i];
+            d=docs[i]; //DOCUMENTS - ok
             app.redraw(d);
                 //unselect();
                 //0unhide_Layer(d);
@@ -28,6 +23,7 @@ function main(){ //reverse order
                 //closer(d);
                 //var force=false
                 //saver(d,force);
+                //rem_w(d);
             $.write(i+" ,");
     }
 }
@@ -49,6 +45,23 @@ function unlock_pi0(d){	//TIME CONSUMING
 		p[k].locked = false;
 	}
 }
+
+function rem_w(d){
+        
+        var w=d.layers['reperage - plots'].pageItems.length;
+        //var v = w-1
+        //d.layers['neutre'].pageItems[v].selected=true
+        //d.layers['neutre'].pageItems[v].remove;
+        var pi = d.layers['reperage - plots'].pageItems
+        for (v=w-1; v>=0 ; v--){
+                if (pi[v].fillcolor=='GrayColor'){
+                    pi[v].remove();
+                }else if (pi[v].filled==false){                    
+                    pi[v].remove();   
+                    
+              }
+            }
+    }
 
 function remthings(d){
     var p = d.layers[x].pageItems; 
