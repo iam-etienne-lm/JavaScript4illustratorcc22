@@ -3,7 +3,7 @@
 "use strict"
 $.level=2;
 main();
-$.write("stackPrint ok >");
+$.write("stackPrint sing ok >");
 $.gc();
 
 //todo clean on comments
@@ -19,24 +19,21 @@ function main(){
         i = 0;
     imax = dao.length;
     if ( dao.length != 0 ){
-                    for ( ; i < imax; i++ ){    //AT EACH i ITERACTION EVENTS DO THINGS
-                    //d=dao[i];
-                    app.open(dao[i]);
-                   
-                        preprocess (dao[i]);
-                       
-                            
+                for ( ; i < imax; i++ ){    //AT EACH i ITERACTION EVENTS DO THINGS
+                    d = app.open(dao[i]);
+                        preprocess (d);
                         duplicatex(d, out);
                         out.activate();
                         movexy(i);
                     d.close(SaveOptions.DONOTSAVECHANGES);
                     $.write(" || "+i+"i || ");
-                    }
-    }
+                }
 	//outputDoc.close(saveOptions.SAVECHANGES);
+    }
 }
 
 function preprocess( d ){
+        
         unhide_Layer(d); //unecessary first
         selector2();
         scalex();
