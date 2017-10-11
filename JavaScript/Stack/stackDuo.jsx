@@ -1,37 +1,65 @@
 #target Illustrator-21
-#script "stackDigital F7.43 mod"
+#script "stackDuo 1.60"
 "use strict"
-$.write(" ok s>")
+$.level=2;
 $.gc();
 main();
 $.gc();
+$.write(" ok s>");
 
 function main(){
 //INIT
 	var fileType = "*.pdf",
-	daoFolder = Folder ("S:/MONTAGES/archive/DAO"),					//y.test OK > F7
+	Folder1 = Folder ("S:/Articles/"),
+    Folder2 = Folder ("S:/Articles/"),
+    files1 = [],
 	files2 = [],
-	outputFile = File ("S:/MONTAGES/02.ai"),
-	o= app.open (outputFile);
-	files2 = daoFolder.getFiles( fileType );
-	if ( files2.length =! 0 ){
-			for ( var i = 0; i < files2.length; i++ ){//AT EACH i ITERACTION EVENTS DO THINGS
-				var d = app.open(files2[i]);
-                    rem_plug(d);
-				unhide_Layer(d);
-                     selector2();
-                    scalex();
+	outputFile = File ("");
+    if(outputFile != ""){
+          //var o= app.open (outputFile);
+    }
+//MAIN
+    files1 = Folder1.getFiles( fileType ); //DAO
+	files2 = Folder2.getFiles( fileType ); //IMP
+	if ( files2.length == files1.length ){
+			for ( var i = 4; i < files2.length; i++ ){//AT EACH i ITERACTION EVENTS DO THINGS
+                    var d1 = app.open(files1[i]);
+				var d2 = app.open(files2[i]);
+                    rem_w(d1);
+                    preprocess( d1 );
+                    preprocess( d2 );
+                        /*rem_plug(d);
+                        unhide_Layer(d);
+                        selector2();
+                        scalex();*/
                     app.redraw();
-                   duplicatex(d, o);
-                    app.redraw();
-                   d.close(SaveOptions.DONOTSAVECHANGES);
-                   movexy(i);
+                    mergetwin(d1, d2);
+                   //duplicatex(d, o);
+                    //app.redraw();
+                   d1.close(SaveOptions.DONOTSAVECHANGES);
+                   //movexy(i);
 				app.redraw();
 				$.write(" || "+i+"i || ");
             }
     }
 	//outputDoc.close(saveOptions.SAVECHANGES);
 }
+
+function preprocess( d ){
+        
+        //unhide_Layer(d); //unecessary first
+        //selector2();
+        //scalex();
+               //d.activate();
+        //selector2();
+        //return (d);
+}
+
+function rem_w(d1){
+        var w=d1.layers['neutre'].pageItems.length;
+        d1.layers['neutre'].pageItems[w-1].remove;
+    }
+
 
 function rem_plug(d){
             var p = d.pluginItems;
@@ -49,12 +77,14 @@ function unhide_Layer(d){											// K LAYERS
     }
 }
 
+//toremove
 function selector1(){
 	for ( var l = 0; l < app.activeDocument.pageItems.length-1; l++) { 	//pageItems  L
 		app.activeDocument.pageItems[l].selected = true;
 	}
 }
 
+//toremove
 function deselector(d){
 	for ( var l = 0; l < d.pageItems.length-1; l++) { 	//pageItems  L
 		app.activeDocument.pageItems[l].selected = false;
@@ -65,13 +95,13 @@ function selector2(){
 	app.executeMenuCommand('selectallinartboard');
 }
 
-function mergetwin(){ 													//active doc!!!
-	if(impFile != null){
-		daoFile.activate();
-		selector();
-		if ( app.activeDocument.selection.length > 0 ) {
+function mergetwin(d1, d2){ 													//active doc!!!
+	if(d2 != null){
+		d1.activate();
+		selector2();
+		if ( d1.selection.length > 0 ) {
 			app.executeMenuCommand('copy');
-			impFile.activate();
+			d2.activate();
 			app.executeMenuCommand('pasteFront');
 		}else{  
 			alert( 'empty selection' );
@@ -139,6 +169,7 @@ actionStr = ['/version 3',
 loading(action, actionStr, set);
 } 
 
+//useless?
 function reframe(){
 	var set = 'a2', // action set name  
 	action = 'a2', // action name  
