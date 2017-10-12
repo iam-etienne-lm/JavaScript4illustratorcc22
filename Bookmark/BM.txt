@@ -35,6 +35,7 @@ move pages		https://indisnip.wordpress.com/2010/08/09/moveduplicate-pages-betwee
 RegEx			http://www.regular-expressions.info/quickstart.html
 RegEx sample		https://stackoverflow.com/questions/31683459/notepad-regexp-search-and-replace-to-add-quotes
 Regex var JS		https://stackoverflow.com/questions/8849357/add-quotation-at-the-start-and-end-of-each-line-in-notepad
+Regex end line add	https://stackoverflow.com/questions/17553390/add-characters-to-the-end-of-a-string-using-regex-notepad2
 DO.ACTION		https://forums.adobe.com/thread/2276107
 Garbage Collector	https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/
 ESTK			http://earthboundlight.com/phototips/extend-script-toolkit.html
