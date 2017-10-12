@@ -1,20 +1,31 @@
 #target Illustrator-21
 #script "stackDuo 1.60"
 "use strict"
-$.level=2;
+$.level=2; //allows stops
 $.gc();
-main();
+head();
 $.gc();
-$.write(" ok s>");
+$.write(" ok sd>");
 
-function main(){
+function head(){
+    var Folder1, Folder2;
+    Folder1 = Folder ("S:/DAO2");
+    Folder2 = Folder ("S:/IMP");
+    main(Folder1, Folder2);
+    Folder1 = Folder ("S:/DAO");
+    Folder2 = Folder ("S:/IMP");
+    main(Folder1, Folder2);
+    }
+
+function main(Folder1, Folder2){
 //INIT
 	var fileType = "*.pdf",
-	Folder1 = Folder ("S:/Articles/"),
-    Folder2 = Folder ("S:/Articles/"),
+    //WARNING ANTISLASH NOT ALLOWED	
     files1 = [],
 	files2 = [],
-	outputFile = File ("");
+    o,
+	outputFile = File ("C:/TEMPai/JS2/o1.ai");
+    
     if(outputFile != ""){
           //var o= app.open (outputFile);
     }
@@ -22,42 +33,40 @@ function main(){
     files1 = Folder1.getFiles( fileType ); //DAO
 	files2 = Folder2.getFiles( fileType ); //IMP
 	if ( files2.length == files1.length ){
-			for ( var i = 4; i < files2.length; i++ ){//AT EACH i ITERACTION EVENTS DO THINGS
+			for ( var i = 0; i < files2.length; i++ ){//AT EACH i ITERACTION EVENTS DO THINGS
+                //D TYPE MUST BE A DOC, NOT A FILE
+                    o= app.open(outputFile);
                     var d1 = app.open(files1[i]);
-				var d2 = app.open(files2[i]);
-                    rem_w(d1);
+                    var d2 = app.open(files2[i]);
                     preprocess( d1 );
                     preprocess( d2 );
-                        /*rem_plug(d);
-                        unhide_Layer(d);
-                        selector2();
-                        scalex();*/
-                    app.redraw();
-                    mergetwin(d1, d2);
-                   //duplicatex(d, o);
-                    //app.redraw();
+                            //app.redraw();
+                    mergetwin(d1, d2); //Paste d1 over d2 | conerve layers during must be enabled
+                    duplicatex(d2, o);
+                            //app.redraw();
                    d1.close(SaveOptions.DONOTSAVECHANGES);
-                   //movexy(i);
-				app.redraw();
+                   d2.close(SaveOptions.DONOTSAVECHANGES);                   
+                   movexy(i);
+                            app.redraw();
 				$.write(" || "+i+"i || ");
             }
     }
 	//outputDoc.close(saveOptions.SAVECHANGES);
 }
 
-function preprocess( d ){
-        
-        //unhide_Layer(d); //unecessary first
-        //selector2();
-        //scalex();
-               //d.activate();
+function preprocess( d ){        
+        unhide_Layer(d); //unecessary first
+        d.activate();
+        selector2();
+        scalex();               
         //selector2();
         //return (d);
 }
 
 function rem_w(d1){
         var w=d1.layers['neutre'].pageItems.length;
-        d1.layers['neutre'].pageItems[w-1].remove;
+        var v = w-1;
+        d1.layers['neutre'].pageItems[v].remove();
     }
 
 
@@ -65,7 +74,7 @@ function rem_plug(d){
             var p = d.pluginItems;
             if (p.length>0){
                 var k = p.length-1;
-                for ( var k = p.length-1; k >=0; k-- ){
+                for ( ; k >=0; k-- ){
                     p[k].remove();
                 }
             }
@@ -75,20 +84,6 @@ function unhide_Layer(d){											// K LAYERS
 	for ( var k = 0; k < d.layers.length; k++ ){				//TODO set names instead of nb
 		d.layers[k].visible = true;
     }
-}
-
-//toremove
-function selector1(){
-	for ( var l = 0; l < app.activeDocument.pageItems.length-1; l++) { 	//pageItems  L
-		app.activeDocument.pageItems[l].selected = true;
-	}
-}
-
-//toremove
-function deselector(d){
-	for ( var l = 0; l < d.pageItems.length-1; l++) { 	//pageItems  L
-		app.activeDocument.pageItems[l].selected = false;
-	}
 }
 
 function selector2(){
@@ -121,7 +116,7 @@ actionStr = ['/version 3',
 '/actionCount 1',
 '/action-1 {',
 	'/name ['+ action.length,  
-	ascii2Hex(action), 							//scale10
+	ascii2Hex(action), 
 	']',
 	'/keyIndex 0',
 	'/colorIndex 0',
@@ -169,64 +164,10 @@ actionStr = ['/version 3',
 loading(action, actionStr, set);
 } 
 
-//useless?
-function reframe(){
-	var set = 'a2', // action set name  
-	action = 'a2', // action name  
-actionStr = ['/version 3',
-'/name [' + set.length,  
-  ascii2Hex(set),				
-']',
-'/isOpen 1',
-'/actionCount 1',
-'/action-1 {',
-	'/name ['+ action.length,  
-	ascii2Hex(action),
-'	]',
-'	/keyIndex 0',
-'	/colorIndex 0',
-'	/isOpen 1',
-'	/eventCount 1',
-'	/event-1 {',
-'		/useRulersIn1stQuadrant 0',
-'		/internalName (adobe_commandManager)',
-'		/localizedName [ 32',
-'			416363c3a964657220c3a020756e6520636f6d6d616e6465206465206d656e75',
-'		]',
-'		/isOpen 0',
-'		/isOn 1',
-'		/hasDialog 0',
-'		/parameterCount 3',
-'		/parameter-1 {',
-'			/key 1769238125',
-'			/showInPalette -1',
-'			/type (ustring)',
-'			/value [ 28',
-'				46697420417274626f61726420746f2073656c656374656420417274',
-'			]',
-'		}',
-'		/parameter-2 {',
-'			/key 1818455661',
-'			/showInPalette -1',
-'			/type (ustring)',
-'			/value [ 40',
-'				416a757374657220c3a0206c27696c6c757374726174696f6e2073c3a96c6563',
-'				74696f6e6ec3a965',
-'			]',
-'		}',
-'		/parameter-3 {',
-'			/key 1668114788',
-'			/showInPalette -1',
-'			/type (integer)',
-'			/value -2130706017',
-'		}',
-'	}',
-'}'].join('\n');
-loading(action, actionStr, set);
-}
-
 function duplicatex(d, o){
-	if (d != null){		
+	if (d != null){
+		d.activate();
+        app.executeMenuCommand('selectallinartboard');
 		if ( d.selection.length > 0 ) {
 			app.executeMenuCommand('copy');
 			o.activate();
@@ -238,6 +179,8 @@ function duplicatex(d, o){
 }
 
 function movexy(i){
+    //LAISE 1200 : 13 columns  @ 7%
+    //LAISE 1200 : 19 columns @ 5%
 /*//INIT 7%
 	var hpos= i%13,
 	vpos= Math.floor(i/13),					//0 for i<13
@@ -248,11 +191,11 @@ function movexy(i){
 	y = Math.floor((30 + vpos*amalheigth) *unit)*(-1); //mm -below
  */
 //INIT 5% test
-	var hpos= i%13,
-	vpos= Math.floor(i/13),					//0 for i<13
-    unit=72/25.4
-	amalwidth=87.5,							//col step
-	amalheigth=280,                                 //row step
+	var hpos= i%19,
+	vpos= Math.floor(i/19),					//0 for i<13
+    unit=72/25.4,
+	amalwidth=62.5,							//col step
+	amalheigth=200,                                 //row step
 	x = Math.floor((30 + hpos*amalwidth ) *unit), //mm conversion follows +right
 	y = Math.floor((30 + vpos*amalheigth) *unit)*(-1); //mm -below
 
@@ -315,11 +258,11 @@ loading(action, actionStr, set);
 } 
 
 function loading(action, actionStr, set){
-	app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
+	app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
 	createAction(actionStr, set);     
 	app.doScript(action, set);   
 	app.unloadAction (set, '');
-	app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS
+	app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
 }
 
 function createAction (actionStr, set) {
