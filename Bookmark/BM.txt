@@ -73,7 +73,7 @@ http://designrshub.com/2013/01/adobe-illustrator-action.html
 https://github.com/jtnimoy/scripting-for-illustrator-tutorial
 http://jongware.mit.edu/iljscs6html/iljscs6/pc_CharacterAttributes.html
 http://jongware.mit.edu/idcs6js/pc_Layer.html
-http://chuwa.iobb.net/tech/illustrator-cc2014-menu-comman.html
+APP MENU CMD 		CS6+	http://chuwa.iobb.net/tech/illustrator-cc2014-menu-comman.html
 https://forums.adobe.com/thread/644569
 https://forums.adobe.com/community/illustrator/illustrator_scripting
 http://cssdk.s3-website-us-east-1.amazonaws.com/sdk/1.0/docs/WebHelp/app_notes/illustrator_paths.htm
