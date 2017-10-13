@@ -3,7 +3,7 @@
 "use strict"
 $.gc();
 main();
-//app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
+app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
 $.write("cleaned/saved")
 $.gc();
 
@@ -11,7 +11,7 @@ function main(){ //reverse order
         var docs=app.documents;
         var i =docs.length-1;
         var d
-        //app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
+        app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
         for ( ; i >= 0; i-- ){
             d=docs[i]; //DOCUMENTS - ok
             app.redraw(d);
@@ -21,12 +21,24 @@ function main(){ //reverse order
                 //remthings(d);
                 //addthings(d);
                 //closer(d);
-                //var force=false
-                //saver(d,force);
+                var force=false
+                //tvect(d);
+                saver(d,force);
                 //rem_w(d);
             $.write(i+" ,");
     }
 }
+
+function tvect(d){
+    //var d= app.activeDocument;
+    var tf= d.textFrames;
+    var i = tf.length-1;
+        for ( ; i>=0 ; i--){
+            tf[i].selected=true;
+            tf[i].createOutline();
+            app.executeMenuCommand('Live Pathfinder Outline');
+        }
+    }
 
 function unselect(){
         app.selection=null;
