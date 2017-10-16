@@ -103,6 +103,7 @@ wiimote				http://www.desiquintans.com/headtrack
 				http://www.makeuseof.com/tag/how-to-connect-your-wiimote-to-your-pc/
 Tesseract Ios			https://www.raywenderlich.com/93276/implementing-tesseract-ocr-ios
 GIT over powershell		https://thepracticalsysadmin.com/setting-up-git-in-windows/
+Airbus stuff			http://bgspotters.net/LBSF/Deciphering_the_Airbus_codes1.pdf
 
 =========EXCEL TCD
 http://www.lecompagnon.info/excel/tableaucroise.htm
