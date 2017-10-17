@@ -20,7 +20,7 @@ http://prepression.blogspot.fr/2015/03/illustrator-variableimporter-script-tutor
 https://openclassrooms.com/courses/ecrivez-des-scripts-en-extendscript
 https://openclassrooms.com/courses/simplifiez-vos-developpements-javascript-avec-jquery/selection-d-elements-3
 http://yearbook.github.io/esdocs/#/
-http://www.jongware.com/
+jsx boss		 http://www.jongware.com/
 http://www.ozalto.com/
 http://jsid.blogspot.fr/2006_04_01_archive.html
 https://medium.com/@jolg42/how-to-create-an-html5-javascript-extension-for-adobe-illustrator-photoshop-cc-78921802e248
