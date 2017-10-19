@@ -7,6 +7,8 @@ BM.contents:
 =$=TECH=$=
 =$=EXCEL TCD=$=
 =$=EXCEL GANTT=$=
+=$=PDF=$=
+=$=PRINT=$=
 =$=RADIO=$=
 
 =========JS scripting TUTO
@@ -119,6 +121,11 @@ LABELS 4 GANTT			http://www.dummies.com/software/microsoft-office/excel/the-art-
 =========PDF
 SINGLE PAGE PDF			http://www.techrepublic.com/blog/tr-dojo/edit-pdf-documents-with-libreoffice-draw/
 OPEN MULTIPLES PAGES AI		http://aiscripts.com/open-multipage-pdf/
+
+==========PRINT
+principe surimpression		www.serge-paulus.be/cours/Recouvrements-surimpr.pdf
+surimpression adobe		https://helpx.adobe.com/fr/illustrator/using/overprinting.html
+
 
 =========RADIO
 http://www.bbc.co.uk/radio/player/bbc_radio_one#
