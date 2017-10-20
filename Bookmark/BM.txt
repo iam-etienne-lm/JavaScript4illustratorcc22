@@ -74,7 +74,7 @@ TUTO				http://vectips.com/tricks/automate-actions-in-illustrator/
 TUTO				http://designrshub.com/2013/01/adobe-illustrator-action.html
 GOOD TUTO			https://github.com/jtnimoy/scripting-for-illustrator-tutorial
 ONLINE HELP			http://jongware.mit.edu/iljscs6html/iljscs6/pc_CharacterAttributes.html
-				http://jongware.mit.edu/idcs6js/pc_Layer.html
+LayerItem methods		http://jongware.mit.edu/idcs6js/pc_Layer.html
 APP MENU CMD 		CS6+	http://chuwa.iobb.net/tech/illustrator-cc2014-menu-comman.html
 https://forums.adobe.com/thread/644569
 PDF GUIDES LIST			https://forums.adobe.com/community/illustrator/illustrator_scripting
