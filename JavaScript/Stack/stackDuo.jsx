@@ -33,6 +33,7 @@ function main(Folder1, Folder2){
     files1 = Folder1.getFiles( fileType ); //DAO
 	files2 = Folder2.getFiles( fileType ); //IMP
 	if ( files2.length == files1.length ){
+		//LENGTH = ARRAY + 1
 			for ( var i = 0; i < files2.length; i++ ){//AT EACH i ITERACTION EVENTS DO THINGS
                 //D TYPE MUST BE A DOC, NOT A FILE
                     o= app.open(outputFile);
