@@ -106,6 +106,7 @@ wiimote				http://www.desiquintans.com/headtrack
 Tesseract Ios			https://www.raywenderlich.com/93276/implementing-tesseract-ocr-ios
 GIT over powershell		https://thepracticalsysadmin.com/setting-up-git-in-windows/
 Airbus stuff			http://bgspotters.net/LBSF/Deciphering_the_Airbus_codes1.pdf
+Round text			https://forums.adobe.com/thread/1284953
 
 =========EXCEL TCD
 http://www.lecompagnon.info/excel/tableaucroise.htm
