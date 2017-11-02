@@ -22,21 +22,41 @@ function main(){ //reverse order
                 //addthings(d);
                 //closer(d);
                 var force=false
-                //tvect(d);
                 saver(d,force);
+                //tvect(d);
+                //testnonvect(d);
                 //rem_w(d);
             $.write(i+" ,");
     }
 }
 
+function selgp(d){
+    var g = d.layers['trace'].groupItems;
+    var i = g.length-1;
+    for ( ; i>=0 ; i--){
+        g[i].selected=true;
+        app.executeMenuCommand('Live Pathfinder Outline');
+        //var p = g.pathItems
+    }
+}
+
 function tvect(d){
-    //var d= app.activeDocument;
-    var tf= d.textFrames;
+    d.activate();
+    var tf= d.layers['trace'].textFrames;
     var i = tf.length-1;
         for ( ; i>=0 ; i--){
             tf[i].selected=true;
-            tf[i].createOutline();
+            d.selection[0].createOutline();
             app.executeMenuCommand('Live Pathfinder Outline');
+        }
+    }
+
+function testnonvect(d){
+    d.activate();
+    var tf= d.layers['trace'].textFrames;
+    var i = tf.length-1;
+        for ( ; i>=0 ; i--){
+            alert(d+" txt");
         }
     }
 
