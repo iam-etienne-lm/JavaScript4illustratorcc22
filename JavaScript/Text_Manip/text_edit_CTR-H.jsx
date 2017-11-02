@@ -1,10 +1,13 @@
 #target Illustrator-21
 #script "textEdit"
+"use strict"
+$.level = 2
 $.gc();
 //app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
 main();
 //app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
 $.write(" CTRL+H ")
+$.gc();
 
 function main(){ //reverse order
     var d= app.activeDocument
@@ -12,7 +15,7 @@ function main(){ //reverse order
     var i =docs.length-1;
     for ( ; i >= 0; i-- ){
         d=docs[i];
-        tgt2(d);
+        tgt(d);
         $.write(" ,"+i);
     }
     /*2 cases recursive or not
@@ -29,14 +32,17 @@ function tgt2(d){
 
 function tgt(d){
      var t1, t2;
-    t1 = 'DAO ';
-    t2 = '' ;
+    //t1 = 'D11116136';
+    //t2 = 'D11116177' ;
+    //cth_s(d,t1,t2);
+    //t1 = '34';
+    //t2 = 'EL';
+    //cth_s(d,t1,t2);
+    t1 = '12/10';
+    t2 = '25/10';
     cth_s(d,t1,t2);
-    t1 = 'FORMATS';
-    t2 = '              ';
-    cth_s(d,t1,t2);
-    t1 = '.pdf';
-    t2 = '';
+    t1 = '312820';
+    t2 = '312819';
     cth_s(d,t1,t2);
     }
 
