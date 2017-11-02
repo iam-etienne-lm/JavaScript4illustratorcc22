@@ -2,6 +2,7 @@
 #script "molu-text"
 "use strict"
 $.gc();
+$.level=2;
 //app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
 main();
 //app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
