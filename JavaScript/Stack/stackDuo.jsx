@@ -1,30 +1,32 @@
 #target Illustrator-21
-#script "stackDuo 1.60"
+#script "stackDuo 1.61 noMove"
 "use strict"
 $.level=2; //allows stops
 $.gc();
 head();
 $.gc();
-$.write(" ok sd>");
+$.write(" ok sd>"+'\n');
 
 function head(){
-    var Folder1, Folder2;
-    Folder1 = Folder ("S:/DAO2");
-    Folder2 = Folder ("S:/IMP");
-    main(Folder1, Folder2);
-    Folder1 = Folder ("S:/DAO");
-    Folder2 = Folder ("S:/IMP");
-    main(Folder1, Folder2);
+    //EACH BATCH MUST HAVE xx NUMBERS ie: 02
+    var Folder1, Folder2, r;
+    Folder1 = Folder ("C:/TEMPai/F9/DAO");
+    Folder2 = Folder ("C:/TEMPai/F9/IMP");
+    main(Folder1, Folder2,r);
+    r=2;
+    Folder1 = Folder ("C:/TEMPai/F9/20A DAO/DAO");
+    Folder2 = Folder ("C:/TEMPai/F9/20AIMP");
+    main(Folder1, Folder2,r);
     }
 
-function main(Folder1, Folder2){
+function main(Folder1, Folder2, r){
 //INIT
 	var fileType = "*.pdf",
     //WARNING ANTISLASH NOT ALLOWED	
     files1 = [],
 	files2 = [],
-    o,
-	outputFile = File ("C:/TEMPai/JS2/o1.ai");
+    o, i , imax,
+	outputFile = File ("C:/TEMPai/F9/stack1/o1.ai");
     
     if(outputFile != ""){
           //var o= app.open (outputFile);
@@ -32,34 +34,39 @@ function main(Folder1, Folder2){
 //MAIN
     files1 = Folder1.getFiles( fileType ); //DAO
 	files2 = Folder2.getFiles( fileType ); //IMP
-	if ( files2.length == files1.length ){
-		//LENGTH = ARRAY + 1
-			for ( var i = 0; i < files2.length; i++ ){//AT EACH i ITERACTION EVENTS DO THINGS
+    imax = files2.length; // LENGTH = i + 1
+	//if ( files2.length == files1.length ){
+             //o= app.open(outputFile);
+			for (i = 0; i < imax; i++ ){
                 //D TYPE MUST BE A DOC, NOT A FILE
-                    o= app.open(outputFile);
+                    //o.activate();
                     var d1 = app.open(files1[i]);
                     var d2 = app.open(files2[i]);
                     preprocess( d1 );
                     preprocess( d2 );
                             //app.redraw();
                     mergetwin(d1, d2); //Paste d1 over d2 | conerve layers during must be enabled
-                    duplicatex(d2, o);
+                    //duplicatex(d2, o);
                             //app.redraw();
                    d1.close(SaveOptions.DONOTSAVECHANGES);
-                   d2.close(SaveOptions.DONOTSAVECHANGES);                   
-                   movexy(i);
+                   //d2.close(SaveOptions.DONOTSAVECHANGES);                  
+                   //movexy(i, r);
                             app.redraw();
 				$.write(" || "+i+"i || ");
             }
-    }
+    //}
+    r++;
+    return (r);
 	//outputDoc.close(saveOptions.SAVECHANGES);
 }
 
 function preprocess( d ){        
         unhide_Layer(d); //unecessary first
-        d.activate();
-        selector2();
-        scalex();               
+        rem_plug(d)
+        //d.activate();
+        //selector2();
+        //sizex();      //DOC BOUNDS MUST END AT PLOTS
+        //scalex();               
         //selector2();
         //return (d);
 }
@@ -67,13 +74,14 @@ function preprocess( d ){
 function rem_w(d1){
         var w=d1.layers['neutre'].pageItems.length;
         var v = w-1;
-        d1.layers['neutre'].pageItems[v].remove();
+        //d1.layers['neutre'].pageItems[v].remove();
     }
 
 
 function rem_plug(d){
             var p = d.pluginItems;
             if (p.length>0){
+                $.write("p")
                 var k = p.length-1;
                 for ( ; k >=0; k-- ){
                     p[k].remove();
@@ -105,13 +113,65 @@ function mergetwin(d1, d2){ 													//active doc!!!
 	}
 }
 
-function scalex(){
-	var set = 'a1', // action set name  
-	action = 'a1', // action name 
-    s=5.0,
+function sizex(){
+var set = 's0', // action set name  
+	action = 'a0', // action name 
+    mm2pt=72/25.4,
+    a=62.5 * mm2pt,//mm
 actionStr = ['/version 3',
 '/name [' + set.length,  
-  ascii2Hex(set),				//script_action1
+  ascii2Hex(set),
+']',
+'/isOpen 1',
+'/actionCount 1',
+'/action-1 {',
+'	/name [' + action.length,  
+	ascii2Hex(action), 
+'	]',
+'	/keyIndex 0',
+'	/colorIndex 0',
+'	/isOpen 1',
+'	/eventCount 1',
+'	/event-1 {',
+'		/useRulersIn1stQuadrant 0',
+'		/internalName (ai_plugin_transformPalette)',
+'		/localizedName [ 22',
+'			50616e6e656175205472616e73666f726d6174696f6e',
+'		]',
+'		/isOpen 0',
+'		/isOn 1',
+'		/hasDialog 0',
+'		/parameterCount 2',
+'		/parameter-1 {',
+'			/key 1954115685',
+'			/showInPalette -1',
+'			/type (enumerated)',
+'			/name [ 34',
+'				4d69736520c3a0206c27c3a96368656c6c65206465206c61206c617267657572', //keep ratio = true
+'				203a',
+'			]',
+'			/value 2',
+'		}',
+'		/parameter-2 {',
+'			/key 1986096245',
+'			/showInPalette -1',
+'			/type (unit real)',
+'			/value '+a,
+'			/unit 592476268',
+'		}',
+'	}',
+'}'].join('\n');
+loading(action, actionStr, set);
+}
+
+function scalex(){ //NOT WORKING
+    selector2();
+	var set = 's1', // action set name  
+	action = 'a1', // action name 
+    s=5.0,   //FACTOR SCALE
+actionStr = ['/version 3',
+'/name [' + set.length,  
+  ascii2Hex(set),
 ']',
 '/isOpen 1',
 '/actionCount 1',
@@ -127,7 +187,7 @@ actionStr = ['/version 3',
 		'/useRulersIn1stQuadrant 0',
 		'/internalName (adobe_scale)',
 		'/localizedName [ 18',
-			'4d69736520c3a0206c27c3a96368656c6c65', //mise a l'echelle/scale
+			'4d69736520c3a0206c27c3a96368656c6c65',
 		']',
 		'/isOpen 0',
 		'/isOn 1',
@@ -150,7 +210,7 @@ actionStr = ['/version 3',
 			'/key 1935895653',
 			'/showInPalette -1',
 			'/type (unit real)',
-			'/value '+s,							//Should be the %
+			'/value '+s,
 			'/unit 592474723',
 		'}',
 		'/parameter-4 {',
@@ -160,7 +220,6 @@ actionStr = ['/version 3',
 			'/value 0',
 		'}',
 	'}',
-	
 '}'].join('\n');
 loading(action, actionStr, set);
 } 
@@ -179,7 +238,10 @@ function duplicatex(d, o){
 	}
 }
 
-function movexy(i){
+function movexy(i, r){ //NOT WORKING
+    if (r>1){
+        i=i+17;
+    }
     //LAISE 1200 : 13 columns  @ 7%
     //LAISE 1200 : 19 columns @ 5%
 /*//INIT 7%
@@ -192,21 +254,21 @@ function movexy(i){
 	y = Math.floor((30 + vpos*amalheigth) *unit)*(-1); //mm -below
  */
 //INIT 5% test
-	var hpos= i%19,
-	vpos= Math.floor(i/19),					//0 for i<13
+	var hpos= i%13,
+	vpos= Math.floor(i/13),					//0 for i<13
     unit=72/25.4,
 	amalwidth=62.5,							//col step
 	amalheigth=200,                                 //row step
 	x = Math.floor((30 + hpos*amalwidth ) *unit), //mm conversion follows +right
-	y = Math.floor((30 + vpos*amalheigth) *unit)*(-1); //mm -below
+	y = Math.floor((30 + vpos*amalheigth) *unit);//*(-1); //mm -below
 
 //CODE
-	if ( i>=10){
+	if ( i>=0){
 		$.write("[[hpos="+hpos+" vpos="+vpos+"]] //x="+x+" y="+y+"\\ ");
 	}else{
-        $.write(" "+vpos+" "+hpos+" ");
+        $.write(" "+vpos+hpos);
     }
-	var set = 'a3',
+	var set = 's3',
 	action = 'a3',
 actionStr = ['/version 3',
 '/name [ ' + set.length,  
@@ -261,7 +323,8 @@ loading(action, actionStr, set);
 function loading(action, actionStr, set){
 	app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
 	createAction(actionStr, set);     
-	app.doScript(action, set);   
+	app.doScript(action, set);
+     $.sleep(500);
 	app.unloadAction (set, '');
 	app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
 }
