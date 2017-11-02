@@ -10,8 +10,8 @@ $.gc();
 function main(){
 //INIT
 	var fileType = "*.pdf", i , imax, d, dao = [] ,
-    daoFolder = Folder ("S:/Articles/Espace Travail/313/313023-XX JOON A320/313023-09_LOGO JOON FUS BACK RHS/ARCHIVES/test/DAO V2"),
-	outputFile = File ("S:/Articles/Espace Travail/313/313023-XX JOON A320/°DOSSIER DE TRAVAIL/MONTAGES/09.ai"),
+    daoFolder = Folder ("S:/test/DAO V2"),
+	outputFile = File ("S:/STACK/09.ai"),
 	out= app.open (outputFile);
     
 //MAIN CODE    
