@@ -1,4 +1,4 @@
-#target Illustrator-21
+//#target Illustrator-22
 #script "stackDuo 1.61 noMove"
 "use strict"
 $.level=2; //allows stops
@@ -10,34 +10,36 @@ $.write(" ok sd>"+'\n');
 function head(){
     //EACH BATCH MUST HAVE xx NUMBERS ie: 02
     var Folder1, Folder2, r;
-    Folder1 = Folder ("C:/TEMPai/F9/DAO");
-    Folder2 = Folder ("C:/TEMPai/F9/IMP");
+	//WARNING ANTISLASH NOT ALLOWED
+    Folder1 = Folder ("C:/TEMPai/F10/ech5/DAO10A");//DAO
+    Folder2 = Folder ("C:/TEMPai/F10/ech5/IMP10A");//IMP
     main(Folder1, Folder2,r);
     r=2;
-    Folder1 = Folder ("C:/TEMPai/F9/20A DAO/DAO");
-    Folder2 = Folder ("C:/TEMPai/F9/20AIMP");
+    Folder1 = Folder ("C:/TEMPai/F10/ech5/DAO20A");
+    Folder2 = Folder ("C:/TEMPai/F10/ech5/IMP20A");
     main(Folder1, Folder2,r);
     }
 
 function main(Folder1, Folder2, r){
 //INIT
 	var fileType = "*.pdf",
-    //WARNING ANTISLASH NOT ALLOWED	
+    	
     files1 = [],
 	files2 = [],
     o, i , imax,
-	outputFile = File ("C:/TEMPai/F9/stack1/o1.ai");
+	outputFile = File ("C:/TEMPai/F10/ech5/o1.ai");
     
-    if(outputFile != ""){
-          //var o= app.open (outputFile);
-    }
+    // if(outputFile !== ""){
+          // o= app.open (outputFile);
+    // }
 //MAIN
     files1 = Folder1.getFiles( fileType ); //DAO
 	files2 = Folder2.getFiles( fileType ); //IMP
     imax = files2.length; // LENGTH = i + 1
-	//if ( files2.length == files1.length ){
-             //o= app.open(outputFile);
-			for (i = 0; i < imax; i++ ){
+	var test2= files1.length; 
+	if ( files2.length == files1.length ){
+        //o= app.open(outputFile);
+		for (i = 0; i < imax; i++ ){
                 //D TYPE MUST BE A DOC, NOT A FILE
                     //o.activate();
                     var d1 = app.open(files1[i]);
@@ -53,8 +55,8 @@ function main(Folder1, Folder2, r){
                    //movexy(i, r);
                             app.redraw();
 				$.write(" || "+i+"i || ");
-            }
-    //}
+		}
+    }
     r++;
     return (r);
 	//outputDoc.close(saveOptions.SAVECHANGES);
@@ -71,17 +73,17 @@ function preprocess( d ){
         //return (d);
 }
 
-function rem_w(d1){
+/* function rem_w(d1){
         var w=d1.layers['neutre'].pageItems.length;
         var v = w-1;
-        //d1.layers['neutre'].pageItems[v].remove();
-    }
+        d1.layers['neutre'].pageItems[v].remove();
+     }*/
 
 
 function rem_plug(d){
             var p = d.pluginItems;
             if (p.length>0){
-                $.write("p")
+                $.write("p");
                 var k = p.length-1;
                 for ( ; k >=0; k-- ){
                     p[k].remove();
@@ -92,6 +94,7 @@ function rem_plug(d){
 function unhide_Layer(d){											// K LAYERS
 	for ( var k = 0; k < d.layers.length; k++ ){				//TODO set names instead of nb
 		d.layers[k].visible = true;
+		d.layers[k].locked = false;
     }
 }
 
@@ -100,7 +103,7 @@ function selector2(){
 }
 
 function mergetwin(d1, d2){ 													//active doc!!!
-	if(d2 != null){
+	if(d2 !== null){
 		d1.activate();
 		selector2();
 		if ( d1.selection.length > 0 ) {
