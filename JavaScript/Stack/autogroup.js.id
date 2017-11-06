@@ -1,0 +1,72 @@
+#target Illustrator-22
+#script "molu-group"
+"use strict"
+$.gc();
+$.level=2;
+//app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
+main();
+//app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
+$.write(" molu'd ")
+$.gc();
+
+function main(){ //reverse order
+    var docs=app.documents;
+    var i =docs.length-1;
+    var d
+    for ( ; i >= 0; i-- ){
+        d=docs[i];
+        get_frame (d);
+        $.write(" ,"+i);
+    }
+}
+
+function get_frame(doc){//DONE
+	var f=doc.layers['franche'].pageItems; //SET LAYERS[INDEX]
+	for(var j=0; j < f.length; j++){
+		//f[j].selected=true;
+		//create_pathText(app.selection[0]);  
+		create_pathText(f[j]);
+		app.redraw();
+		$.sleep (50);
+	}
+}
+
+    function create_pathText(f) {//TODO
+        var text = get_inside(f),
+            //l = activeDocument.pathItems.add(),
+            // t = (l.setEntirePath(get_line(f)), activeDocument.textFrames.pathText(l));
+        // text.textRange.move(t, ElementPlacement.PLACEATBEGINNING);
+        // t.textRange.characterAttributes.baselineShift = 400; // offset to bottom
+        // t.textRange.paragraphAttributes.justification = Justification.CENTER;
+        // text.remove();
+    }
+
+    function get_inside(f) {//TO REN TO OFFSET
+        var g = f.geometricBounds,
+            p = activeDocument.pageItems,
+            i = 0,
+            gt;
+        for (; i < p.length; i++) {
+            gt = p[i].geometricBounds;
+            if (gt[0] > g[0] && gt[1] < g[1] && gt[2] < g[2] && gt[3] > g[3]) { //POSSIBLE ISSUE TOO LARGE TF
+                return p[i]
+            }
+        }
+    }
+
+    function get_line(p) {//TO REM
+        // var ps = p.pathPoints,
+            // g = p.geometricBounds,
+            // i = 0,
+            // br/*bottomRight*/, pre, next;
+        // for (; i < ps.length; i++) {
+            // pre = (i == 0) ? ps[ps.length - 1] : ps[i - 1];
+            // next = (i == ps.length - 1) ? ps[0] : ps[i + 1];
+            // br = ps[i].anchor;
+            // if ((pre.anchor[0] - br[0]) < (pre.anchor[1] - br[1]) &&
+                // (br[0] - next.anchor[0]) > (br[1] - next.anchor[1])
+            // ) {
+                // return [[g[0], g[3]], br]
+            // }
+        // }
+}
