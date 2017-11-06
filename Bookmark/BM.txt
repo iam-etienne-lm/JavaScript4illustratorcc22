@@ -5,6 +5,7 @@ BM.contents:
 =$=IDE/CONSOLE TUTO=$=
 =$=MATHS TUTO=$=
 =$=TECH=$=
+=$=Ai=$=
 =$=EXCEL TCD=$=
 =$=EXCEL GANTT=$=
 =$=PDF=$=
@@ -108,6 +109,9 @@ GIT over powershell		https://thepracticalsysadmin.com/setting-up-git-in-windows/
 Airbus stuff			http://bgspotters.net/LBSF/Deciphering_the_Airbus_codes1.pdf
 Round text			https://forums.adobe.com/thread/1284953
 Flip text without mirror	https://forums.adobe.com/thread/835112
+
+===========Ai
+https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
 
 =========EXCEL TCD
 http://www.lecompagnon.info/excel/tableaucroise.htm
