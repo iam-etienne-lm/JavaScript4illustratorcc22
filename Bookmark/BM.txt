@@ -16,6 +16,7 @@ BM.contents:
 CODE REVIEW		http://www.jshint.com/
 CODE TEST		http://jsfiddle.net
 Variable Scope		https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/
+ternary			https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 TUTO	http://www.tarleton.edu/COSTWEB/computerscience/documents/CS%20230%20Documents/Articles/JavaScript%20Tutorial.pdf
 TUTO			https://code.tutsplus.com/series/learn-javascript-the-complete-guide--cms-1112
 http://www.adobepress.com/articles/article.asp?p=791593&seqNum=7
