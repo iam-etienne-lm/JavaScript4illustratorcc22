@@ -1,4 +1,4 @@
-#target Illustrator-21
+#target Illustrator-22
 #script "textEdit"
 "use strict"
 $.level = 2
