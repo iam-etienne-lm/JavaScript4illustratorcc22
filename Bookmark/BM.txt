@@ -51,6 +51,7 @@ execute		https://stackoverflow.com/questions/18969372/execute-external-script-in
 JS_ MDN functions	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
 bounds artboards	http://www.indiscripts.com/post/2009/09/clean-up-your-pasteboard
 pdf save		https://forums.adobe.com/thread/2405129
+batch layer ren		https://forums.adobe.com/thread/1173366
 
 =========JSAMPLES
 PATHS			https://stackoverflow.com/questions/30338254/illustrator-scripting-select-all-paths-using-js
@@ -109,11 +110,11 @@ wiimote				http://www.desiquintans.com/headtrack
 Tesseract Ios			https://www.raywenderlich.com/93276/implementing-tesseract-ocr-ios
 GIT over powershell		https://thepracticalsysadmin.com/setting-up-git-in-windows/
 Airbus stuff			http://bgspotters.net/LBSF/Deciphering_the_Airbus_codes1.pdf
-Round text			https://forums.adobe.com/thread/1284953
-Flip text without mirror	https://forums.adobe.com/thread/835112
 
 ===========Ai
 https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
+Round text			https://forums.adobe.com/thread/1284953
+Flip text without mirror	https://forums.adobe.com/thread/835112
 
 =========EXCEL TCD
 http://www.lecompagnon.info/excel/tableaucroise.htm
