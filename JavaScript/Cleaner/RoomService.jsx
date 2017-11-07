@@ -41,13 +41,15 @@ function selgp(d){
 }
 
 function tvect(d){
-    d.activate();
+    d.selection=null;
     var tf= d.layers['trace'].textFrames;
     var i = tf.length-1;
-        for ( ; i>=0 ; i--){
-            tf[i].selected=true;
-            d.selection[0].createOutline();
-            app.executeMenuCommand('Live Pathfinder Outline');
+	for ( ; i>=0 ; i--){
+	    tf[i].selected=true;
+	    d.selection[0].createOutline();
+	    $.sleep(300);
+	    app.executeMenuCommand('Live Pathfinder Outline');
+	    $.sleep(50);
         }
     }
 
