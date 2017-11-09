@@ -114,6 +114,7 @@ GIT over powershell		https://thepracticalsysadmin.com/setting-up-git-in-windows/
 Airbus stuff			http://bgspotters.net/LBSF/Deciphering_the_Airbus_codes1.pdf
 OpenSource vector		http://paperjs.org/about/
 vektors				http://monovektor.com/
+BSD MINIX			http://linuxfr.org/nodes/88229/comments/1291183
 
 ===========Ai
 https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
