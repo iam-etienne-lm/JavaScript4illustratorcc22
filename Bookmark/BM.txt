@@ -113,6 +113,7 @@ Tesseract Ios			https://www.raywenderlich.com/93276/implementing-tesseract-ocr-i
 GIT over powershell		https://thepracticalsysadmin.com/setting-up-git-in-windows/
 Airbus stuff			http://bgspotters.net/LBSF/Deciphering_the_Airbus_codes1.pdf
 OpenSource vector		http://paperjs.org/about/
+vektors				http://monovektor.com/
 
 ===========Ai
 https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
