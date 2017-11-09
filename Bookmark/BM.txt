@@ -52,6 +52,7 @@ JS_ MDN functions	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 bounds artboards	http://www.indiscripts.com/post/2009/09/clean-up-your-pasteboard
 pdf save		https://forums.adobe.com/thread/2405129
 batch layer ren		https://forums.adobe.com/thread/1173366
+3rd party cmd		https://scriptographer.org/Reference/AI/Point/
 
 =========JSAMPLES
 PATHS			https://stackoverflow.com/questions/30338254/illustrator-scripting-select-all-paths-using-js
