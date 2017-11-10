@@ -1,3 +1,6 @@
+====RADIO
+BBC R1              http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p
+
 ====Electro
 madeon{ imperium}
 Jaded{ In The Morning}
