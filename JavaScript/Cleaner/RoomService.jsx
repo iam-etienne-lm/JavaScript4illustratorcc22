@@ -26,8 +26,20 @@ function main(){ //reverse order
                 //tvect(d);
                 //testnonvect(d);
                 //rem_w(d);
+		//rem_plug(d);
             $.write(i+" ,");
     }
+}
+
+function rem_plug(d){
+            var p = d.pluginItems;
+            if (p.length>0){
+                $.write("p");
+                var k = p.length-1;
+                for ( ; k >=0; k-- ){
+                    p[k].remove();
+                }
+            }
 }
 
 function selgp(d){
