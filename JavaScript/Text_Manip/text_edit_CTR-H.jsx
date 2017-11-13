@@ -10,7 +10,7 @@ $.write(" CTRL+H ")
 $.gc();
 
 function main(){ //reverse order
-    var d= app.activeDocument
+    var d= app.activeDocument;
     var docs=app.documents;
     var i =docs.length-1;
     for ( ; i >= 0; i-- ){
