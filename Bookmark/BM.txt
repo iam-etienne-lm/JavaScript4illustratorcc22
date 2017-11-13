@@ -91,6 +91,7 @@ Join text			https://pastebin.com/4nc3kq7X
 Subfolders export		https://forums.adobe.com/message/9534618#9534618
 Parm errors workarounds		https://forums.adobe.com/thread/430404
 AI variables			https://forums.adobe.com/thread/2408144
+text manip suite		https://forums.adobe.com/thread/2270720
 
 =========IDE/CONSOLE TUTO
 $ DOLLAR	http://javascript-tools-guide.readthedocs.io/8%20-%20ExtendScript%20Tools%20and%20Features/dollar-object.html
