@@ -15,3 +15,8 @@ Snippet:
 
 0,0 is TOP LEFT of artboard: contrary to mentionned here https://github.com/jtnimoy/scripting-for-illustrator-tutorial
 
+******************************************************
+
+Method geometricBounds represent 2 couples of coordinates that are graphically represented as the selectionned object rectangle
+(a1,a2,b1,b2)
+Those coordinates takes into account the ORIGINAL artboard's origin. So if you resize the object and clip the artboard: the top left corner would move from the original couple. Obviously it's depending on the origin selector 9 squares.
