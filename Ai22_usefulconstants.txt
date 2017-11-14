@@ -1,0 +1,17 @@
+Snippet:
+
+    #target Illustrator-22
+    #script "rekt"
+    "use strict"
+    main();
+    $.write("rekt")
+    $.gc();
+
+    function main(){
+        var d,
+        d=app.activeDocument;
+        d.pathItems.rectangle(0,0,10,10);
+    }
+
+0,0 is TOP LEFT of artboard: contrary to mentionned here https://github.com/jtnimoy/scripting-for-illustrator-tutorial
+
