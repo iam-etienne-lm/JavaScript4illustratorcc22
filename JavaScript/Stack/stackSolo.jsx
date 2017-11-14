@@ -1,4 +1,4 @@
-#target Illustrator-21
+#target Illustrator-22
 #script "stackPrint single J1.1.60" //AIA HALF BROKEN!! CHECK NEW AB IDEA WORKAROUND, NOT DEV YET
 "use strict"
 $.level=2;
