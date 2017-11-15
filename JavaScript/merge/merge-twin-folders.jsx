@@ -1,4 +1,4 @@
-﻿#target Illustrator-21
+﻿#target Illustrator-22
 #targetengine main
 var scriptID = "merge-2-folders v1.0";
 var daoFolder = null
