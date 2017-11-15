@@ -7,12 +7,16 @@ $.gc();
 
 function main(){
     var d,
+    i,
     x,
     y,
     bot,
     rig;
     
     d=app.activeDocument;
-    d.pathItems.rectangle(x,y,10,10);
-    
+    for (i=0;i<100;i++){
+        x=i%rig;
+        y=i%bot;
+        d.pathItems.rectangle(x,y,10,10);
+    }
 }
