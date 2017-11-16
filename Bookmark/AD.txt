@@ -1,7 +1,7 @@
-====RADIO
+# ====RADIO
 BBC R1              http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p
 
-====Electro
+# ====Electro
 madeon{ imperium}
 Jaded{ In The Morning}
 Kelis{ Acapella}
@@ -10,7 +10,7 @@ Disciples{On My Mind }
 The xx {Dangerous}
 
 
-====Dance
+# ====Dance
 Kieza{ Hideaway}
 Years Years{ Desire}
 Robin S{ Show me love}
@@ -20,7 +20,7 @@ Martin Solveig{All Stars (Club Mix) (feat. Alma)}
 James Hype{More Than Friends (feat. Kelli‐Leigh) }
 Drake{One Dance (feat. WizKid & Kyla)}
 
-====Pop
+# ====Pop
 Sampha{ Blood on me}
 Kid Cudi & Crookers{ Day n nite}
 Baby D{Let me be your fantasy}
@@ -32,7 +32,7 @@ Rae Morris {Do It}
 Snakehips {All My Friends (feat. Tinashe & Chance the Rapper)}
 
 
-====Rock
+# ====Rock
 
 Wolf Alice {Beautifully Unconventional}
 HAIM {Want You Back }
