@@ -2,7 +2,7 @@
 #script "rekt"
 "use strict"
 main();
-$.write("rekt")
+$.write("rekted")
 $.gc();
 
 function main(){
