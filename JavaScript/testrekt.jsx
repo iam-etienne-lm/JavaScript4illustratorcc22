@@ -18,9 +18,9 @@ function main(){
     d.pathItems.rectangle(-20,0,20,10);
     
     /*a = d.Artboards[0];
-    ab=d.Artboards[0].geometricBounds;
-    bot = ab[3];
-    rig = ab[2];
+    g=d.Artboards[0].geometricBounds;
+    bot = g[3];
+    rig = g[2];
     
     for (i=0;i<100;i++){
         x=i%rig;
