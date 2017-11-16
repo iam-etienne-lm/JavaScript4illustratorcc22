@@ -10,12 +10,28 @@ function main(){
     i,
     x,
     y,
+    xx,
+    yy,
     ab,
     bot,
     rig;
     
     d=app.activeDocument;
-    d.pathItems.rectangle(-20,0,20,10);
+    //d.pathItems.rectangle(0,0,40,20);
+    
+        y=0;
+        x=0;
+        xx=10;
+        yy=10;    
+    
+    for(i=0;i<100;i++){
+
+        d.pathItems.rectangle(y,x,xx,yy);
+        x=xx;
+        y=yy*(-1);
+        xx=xx+10;
+        yy=yy+10;
+        }
     
     /*a = d.Artboards[0];
     g=d.Artboards[0].geometricBounds;
