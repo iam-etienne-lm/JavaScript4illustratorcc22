@@ -29,7 +29,7 @@ function setAFont(d){
             t[i].textRange.characterAttributes.textFont.name = 'CNC Vector';
             //t[i].textRange.characterAttributes.textFont = app.textFonts.getByName("CNC Vector");
         }
-        l=null;
+        //l=null;
 
 }
 
