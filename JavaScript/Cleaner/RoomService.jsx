@@ -1,17 +1,17 @@
 #target Illustrator-22
 #script "ROOMSERVICE"
 "use strict"
-$.gc();
+$.level=2;
 main();
-app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
-$.write("cleaned/saved")
+//app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
+$.write("cleaned/saved");
 $.gc();
 
 function main(){ //reverse order
         var docs=app.documents;
         var i =docs.length-1;
-        var d
-        app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
+        var d;
+        //app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
         for ( ; i >= 0; i-- ){
             d=docs[i]; //DOCUMENTS - ok
             app.redraw(d);
@@ -21,7 +21,7 @@ function main(){ //reverse order
                 //remthings(d);
                 //addthings(d);
                 //closer(d);
-                var force=false
+                var force=false;
                 saver(d,force);
                 //tvect(d);
                 //testnonvect(d);
@@ -98,7 +98,7 @@ function rem_w(d){
         //var v = w-1
         //d.layers['neutre'].pageItems[v].selected=true
         //d.layers['neutre'].pageItems[v].remove;
-        var pi = d.layers['reperage - plots'].pageItems
+        var pi = d.layers['reperage - plots'].pageItems;
         for (v=w-1; v>=0 ; v--){
                 if (pi[v].fillcolor=='GrayColor'){
                     pi[v].remove();
