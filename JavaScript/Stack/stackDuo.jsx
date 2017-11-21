@@ -2,7 +2,6 @@
 #script "stackDuo 1.61 noMove"
 "use strict"
 $.level=2; //allows stops
-$.gc();
 head();
 $.gc();
 $.write(" ok sd>"+'\n');
