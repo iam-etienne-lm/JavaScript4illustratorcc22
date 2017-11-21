@@ -19,6 +19,7 @@ Duke Dumont & Gorgon City{ Real Life (feat. Naations)}
 Martin Solveig{All Stars (Club Mix) (feat. Alma)}
 James Hype{More Than Friends (feat. Kelli‐Leigh) }
 Drake{One Dance (feat. WizKid & Kyla)}
+Blonde{All Cried Out (feat. Alex Newell)}
 
 # ====Pop
 Sampha{ Blood on me}
