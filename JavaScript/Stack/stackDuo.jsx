@@ -10,12 +10,12 @@ function head(){
     //EACH BATCH MUST HAVE xx NUMBERS ie: 02
     var Folder1, Folder2, r;
 	//WARNING ANTISLASH NOT ALLOWED
-    Folder1 = Folder ("C:/TEMPai/F10/ech5/DAO10A");//DAO
-    Folder2 = Folder ("C:/TEMPai/F10/ech5/IMP10A");//IMP
+    Folder1 = Folder ("C:/TEMPai/F13/ech5/D10");//DAO
+    Folder2 = Folder ("C:/TEMPai/F13/ech5/I10");//IMP
     main(Folder1, Folder2,r);
     r=2;
-    Folder1 = Folder ("C:/TEMPai/F10/ech5/DAO20A");
-    Folder2 = Folder ("C:/TEMPai/F10/ech5/IMP20A");
+    Folder1 = Folder ("C:/TEMPai/F13/ech5/D20");
+    Folder2 = Folder ("C:/TEMPai/F13/ech5/I20");
     main(Folder1, Folder2,r);
     }
 
