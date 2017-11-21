@@ -1,4 +1,4 @@
-//#target Illustrator-22
+#target Illustrator-22
 #script "stackDuo 1.61 noMove"
 "use strict"
 $.level=2; //allows stops
