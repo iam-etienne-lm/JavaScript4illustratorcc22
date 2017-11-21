@@ -3,7 +3,7 @@
 "use strict"
 $.level=2;
 main();
-//app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
+app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
 $.write("cleaned/saved");
 $.gc();
 
@@ -11,7 +11,7 @@ function main(){ //reverse order
         var docs=app.documents;
         var i =docs.length-1;
         var d;
-        //app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
+        app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS
         for ( ; i >= 0; i-- ){
             d=docs[i]; //DOCUMENTS - ok
             app.redraw(d);
