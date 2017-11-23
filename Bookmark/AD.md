@@ -31,7 +31,7 @@ Lorde{Royals }
 Drake{Passionfruit }
 Rae Morris {Do It}
 Snakehips {All My Friends (feat. Tinashe & Chance the Rapper)}
-
+Charlie Puth {How Long}
 
 # ====Rock
 
