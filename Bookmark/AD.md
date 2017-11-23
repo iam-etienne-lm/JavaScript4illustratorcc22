@@ -34,6 +34,9 @@ Snakehips {All My Friends (feat. Tinashe & Chance the Rapper)}
 Charlie Puth {How Long}
 Kesha {Learn To Let Go}
 Rita Ora{Anywhere}
+Rag’n’Bone Man{Human }
+Clean Bandit{I Miss You (feat. Julia Michaels) }
+Bastille{Pompeii }
 
 # ====Rock
 
