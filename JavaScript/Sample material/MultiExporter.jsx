@@ -1,4 +1,4 @@
-﻿// MultiExporter.jsx
+// MultiExporter.jsx
 // Version 0.1
 // Version 0.2 Adds PNG and EPS exports
 // Version 0.3 Adds support for exporting at different resolutions
