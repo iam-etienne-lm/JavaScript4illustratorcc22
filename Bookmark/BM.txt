@@ -121,6 +121,7 @@ SSD Trim			http://www.bbc.co.uk/blogs/internet/entries/ce3eff16-228f-49a0-8d4e-d
 proxy				http://anton.belodedenko.me/netflix-proxy-geo-unblocker/
 MBD				https://en.wikipedia.org/wiki/Model-based_definition
 Terminal recorder colors	https://asciinema.org/
+EASA PART21			http://www.ddpconcepts.ch/assets/20303001_002_easa_part_21_amcgm_0-1_public.pdf
 
 ===========Ai
 https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
