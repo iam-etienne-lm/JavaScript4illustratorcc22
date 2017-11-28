@@ -122,6 +122,8 @@ proxy				http://anton.belodedenko.me/netflix-proxy-geo-unblocker/
 MBD				https://en.wikipedia.org/wiki/Model-based_definition
 Terminal recorder colors	https://asciinema.org/
 EASA PART21			http://www.ddpconcepts.ch/assets/20303001_002_easa_part_21_amcgm_0-1_public.pdf
+				https://www.nasa.gov/centers/dryden/pdf/88524main_H-2210.pdf
+				https://tubdok.tub.tuhh.de/bitstream/11420/238/1/frische_sicfp97.pdf
 
 ===========Ai
 https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
