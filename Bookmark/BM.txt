@@ -73,6 +73,7 @@ S&R Control-H		https://forums.adobe.com/message/9442848#9442848
 			https://forums.adobe.com/message/9373441#9373441
 			https://forums.adobe.com/message/9297616#9297616
 samples			http://creativetuts.com/how-to-remove-all-guides-in-a-document-using-illustrator-script/
+flip matrix		https://stackoverflow.com/questions/11603662/illustrator-script-for-flip-horizontal
 
 =========SCRIPTS samples
 TUTO				http://vectips.com/tricks/automate-actions-in-illustrator/
