@@ -1,10 +1,10 @@
 #target Illustrator-22
-#script "ROOMSERVICE"
+#script "RAswap"
 "use strict"
 $.level=2;
 main();
 //app.userInteractionLevel = UserInteractionLevel.DISPLAYALERTS;
-$.write("ren");
+$.write("array swap'd");
 $.gc();
 
 function main(){ //reverse order
