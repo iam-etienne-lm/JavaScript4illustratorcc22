@@ -12,7 +12,7 @@ function main(){ //reverse order
     var docs = app.documents;
     var docs = d;
     //var i = docs.length-1;
-    var i = 0;
+    var i = 0; //TEMP EDIT
 	for ( ; i >= 0; i-- ){
         d = docs[i];
         tgt(d);
