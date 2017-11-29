@@ -43,8 +43,13 @@ function tgt(d){
     j0=0;
 	jm=t.length-1;
 	for(j=j0;j<jm;j++){ //basic array swap, no comparison
-		t[j].contents="x "+(j+1);
+        if(j+1<10){
+            t[j].contents="x 0"+(j+1);
+        }else{
+            t[j].contents="x "+(j+1);
+        }
     }
+
     /*t1 = '12/10';
     t2 = '25/10';
     cth_s(d,t1,t2);
