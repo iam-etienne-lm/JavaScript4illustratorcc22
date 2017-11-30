@@ -16,11 +16,30 @@ function main(){ //reverse order
 	for ( ; i >= 0; i-- ){
         //d = docs[i];
         kalk(d);
-        flip(d);
+        flipsel(d);
         $.write(" ,"+i);
     }
 }
 
+function flipsel(d){
+	var d, j, j0, jm, l, m, t, x;
+    d=app.activeDocument;
+    l;
+    t=d.selection;
+    //t=d.selection.textFrames;
+    j0=0;
+	jm=t.length-1;
+	m = app.getScaleMatrix(-100,100);
+	for(j=j0;j<=jm;j++){
+        x=t[j];
+		if(x.typename=="TextFrame"){
+            l=true;
+			t[j].transform(m);
+            
+		}
+	}
+    x=null;
+}
 
 function flip(d){
 	var d, j, j0, jm, l, m, t;
