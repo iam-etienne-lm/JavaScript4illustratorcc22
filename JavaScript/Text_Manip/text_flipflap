@@ -9,26 +9,35 @@ $.gc();
 
 function main(){ //reverse order
     var d = app.activeDocument;
-    var docs = app.documents;
-    var docs = d;
+    //var docs = app.documents;
+    //var docs = d;
     //var i = docs.length-1;
     var i = 0;
 	for ( ; i >= 0; i-- ){
-        d = docs[i];
-        tgt(d);
+        //d = docs[i];
+        kalk(d);
+        flip(d);
         $.write(" ,"+i);
     }
 }
 
 
-function tgt(d){
-	var d, j, j0, jm, m, t;
+function flip(d){
+	var d, j, j0, jm, l, m, t;
     d=app.activeDocument;
+    l;
 	t=d.textFrames;
     j0=0;
 	jm=t.length-1;
 	m = app.getScaleMatrix(-100,100);
-	for(j=j0;j<jm;j++){ //basic array swap, no comparison
+	for(j=j0;j<jm;j++){ 
 		t[j].transform(m);
     }
+}
+
+function kalk(d){
+    var la = [];
+    for (i=0;i<d.layers.length;i++)
+        la.push(d.layers[i]);
+        return (la);
 }
