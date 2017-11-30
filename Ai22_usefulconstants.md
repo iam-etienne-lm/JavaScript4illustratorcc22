@@ -25,4 +25,4 @@ Those coordinates takes into account the ORIGINAL artboard's origin. So if you r
 artboard.rulerorigin can offset from topleft corner
 
 #### Array type
-set a variable for a specific array element : if arrayItems[i] is a TextItem array[i].typename is not but x= array[i]; x.typename =="TextFrame" => true!
+set a variable for a specific array element : if arrayItems[i] is a TextItem array[i].typename is "not defined"... but x= array[i]; x.typename =="TextFrame" => true!
