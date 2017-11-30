@@ -123,8 +123,8 @@ proxy				http://anton.belodedenko.me/netflix-proxy-geo-unblocker/
 MBD				https://en.wikipedia.org/wiki/Model-based_definition
 Terminal recorder colors	https://asciinema.org/
 EASA PART21			http://www.ddpconcepts.ch/assets/20303001_002_easa_part_21_amcgm_0-1_public.pdf
-				https://www.nasa.gov/centers/dryden/pdf/88524main_H-2210.pdf
-				https://tubdok.tub.tuhh.de/bitstream/11420/238/1/frische_sicfp97.pdf
+EHS actuators			https://www.nasa.gov/centers/dryden/pdf/88524main_H-2210.pdf
+EHS actuators			https://tubdok.tub.tuhh.de/bitstream/11420/238/1/frische_sicfp97.pdf
 subfocate open code		https://stackoverflow.com/questions/4707276/encrypting-r-script-under-ms-windows
 
 ===========Ai
@@ -150,7 +150,6 @@ OPEN MULTIPLES PAGES AI		http://aiscripts.com/open-multipage-pdf/
 ==========PRINT
 principe surimpression		www.serge-paulus.be/cours/Recouvrements-surimpr.pdf
 surimpression adobe		https://helpx.adobe.com/fr/illustrator/using/overprinting.html
-
 
 =========RADIO
 http://www.bbc.co.uk/radio/player/bbc_radio_one#
