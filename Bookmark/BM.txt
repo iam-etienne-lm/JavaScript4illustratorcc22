@@ -126,6 +126,7 @@ EASA PART21			http://www.ddpconcepts.ch/assets/20303001_002_easa_part_21_amcgm_0
 EHS actuators			https://www.nasa.gov/centers/dryden/pdf/88524main_H-2210.pdf
 EHS actuators			https://tubdok.tub.tuhh.de/bitstream/11420/238/1/frische_sicfp97.pdf
 subfocate open code		https://stackoverflow.com/questions/4707276/encrypting-r-script-under-ms-windows
+site 0 html			http://www.lincoste.com/ebooks/pdf/informatique/Site_web_html5_css3.pdf
 
 ===========Ai
 https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
