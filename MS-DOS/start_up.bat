@@ -20,8 +20,8 @@ TIMEOUT /T 1 /NOBREAK
 
 TIMEOUT /T 1 /NOBREAK
 ::ffp with a shortcut
-::"C:\Users\user1\Documents\archive\temp int\FirefoxPortable_54.0_English.paf\FirefoxPortable.exe" -private gist.github.com adobe.com/community bbc.co.uk/radio/player/bbc_radio_one#
-ffp.lnk
+"C:\Program Files (x86)\Mozilla Firefox\firefox.exe" -private gist.github.com adobe.com/community bbc.co.uk/radio/player/bbc_radio_one#
+::ffp.lnk
 
 ::=====================================================================
 ::template (short cmd)
