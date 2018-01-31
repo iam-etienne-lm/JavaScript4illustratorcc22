@@ -129,6 +129,7 @@ subfocate open code		https://stackoverflow.com/questions/4707276/encrypting-r-sc
 site 0 html			http://www.lincoste.com/ebooks/pdf/informatique/Site_web_html5_css3.pdf
 grep findstr			https://stackoverflow.com/questions/15199321/powershell-equivalent-to-grep-f
 grep				http://vasir.net/blog/ubuntu/replace_string_in_multiple_files/
+pwshell				https://blogs.msdn.microsoft.com/zainnab/2007/07/08/grep-and-sed-with-powershell/
 
 ===========Ai
 https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
