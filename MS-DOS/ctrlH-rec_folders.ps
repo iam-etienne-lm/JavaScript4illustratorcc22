@@ -1,0 +1,7 @@
+$htFiles = Get-ChildItem . *.html -rec
+foreach ($file in $htFiles)
+{
+    (Get-Content $file.PSPath) |
+    Foreach-Object { $_ -replace "teal", " " } |
+    Set-Content $file.PSPath
+}
