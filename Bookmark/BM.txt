@@ -132,6 +132,7 @@ grep				http://vasir.net/blog/ubuntu/replace_string_in_multiple_files/
 pwshell				https://blogs.msdn.microsoft.com/zainnab/2007/07/08/grep-and-sed-with-powershell/
 https://stackoverflow.com/questions/2837785/powershell-script-to-find-and-replace-for-all-files-with-a-specific-extension
 	https://blogs.technet.microsoft.com/heyscriptingguy/2011/05/01/best-practice-for-using-aliases-in-powershell-scripts/
+OUTlook attach reply		https://www.extendoffice.com/documents/outlook/1613-outlook-reply-with-attachments.html
 
 ===========Ai
 https://forums.adobe.com/external-link.jspa?url=http%3A%2F%2Fprodesigntools.com%2Fadobe-cc-2015-direct-download-links.html
