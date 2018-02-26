@@ -40,6 +40,7 @@ Clean Bandit{I Miss You (feat. Julia Michaels) }
 Bastille{Pompeii }
 Anne‐Marie{Finders Keepers Medley (Radio 1 Live Lounge, 23 Nov 2017)}
 Charli XCX{Boom Clap}
+Katy Perry{Chained To The Rhythm (feat. Skip Marley)}
 
 
 
