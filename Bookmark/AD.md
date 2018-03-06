@@ -50,3 +50,5 @@ Wolf Alice {Beautifully Unconventional}
 HAIM {Want You Back }
 Tom Walker{Heartland }
 Harry Styles{Kiwi }
+The Magic Gang{Getting Along}
+
