@@ -21,6 +21,7 @@ James Hype{More Than Friends (feat. Kelli‐Leigh) }
 Drake{One Dance (feat. WizKid & Kyla)}
 Blonde{All Cried Out (feat. Alex Newell)}
 MK{17]
+CLiQ{Wavey (feat. Alika)}
 
 # ====Pop
 Sampha{ Blood on me}
