@@ -44,6 +44,7 @@ Charli XCX{Boom Clap}
 Katy Perry{Chained To The Rhythm (feat. Skip Marley)}
 Ariana Grande{Into You}
 Clean Bandit{Tears (feat. Louisa Johnson)}
+The Chainsmokers{Sick Boy}
 
 
 
