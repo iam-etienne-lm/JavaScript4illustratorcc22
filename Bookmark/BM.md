@@ -10,7 +10,6 @@ BM.contents:
 =$=EXCEL GANTT=$=
 =$=PDF=$=
 =$=PRINT=$=
-=$=RADIO=$=
 
 =========JS scripting TUTO
 CODE REVIEW		http://www.jshint.com/
@@ -158,5 +157,3 @@ OPEN MULTIPLES PAGES AI		http://aiscripts.com/open-multipage-pdf/
 principe surimpression		www.serge-paulus.be/cours/Recouvrements-surimpr.pdf
 surimpression adobe		https://helpx.adobe.com/fr/illustrator/using/overprinting.html
 
-=========RADIO
-http://www.bbc.co.uk/radio/player/bbc_radio_one#
